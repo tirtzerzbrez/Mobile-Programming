@@ -12,11 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2d38758f-ac39-4fee-8b1c-9d7ec05fc4c9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitapps/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitapps/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Flutter/flutter/bin/cache/dart-sdk" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -81,19 +80,22 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615788721050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615788721050" />
-    <state x="520" y="141" width="1200" height="822" key="AVDManager" timestamp="1615788326682">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="339" y="64" width="854" height="608" key="AVDManager" timestamp="1615803191316">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="339" y="64" width="854" height="608" key="AVDManager/0.0.1366.768@0.0.1366.768" timestamp="1615803191316" />
     <state x="520" y="141" width="1200" height="822" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615788326682" />
-    <state x="900" y="307" key="FileChooserDialogImpl" timestamp="1615788196115">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="640" y="227" key="FileChooserDialogImpl" timestamp="1615801251486">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="640" y="227" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615801251486" />
     <state x="900" y="307" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615788196115" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1615789259570">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -111,9 +113,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615789259570" />
-    <state x="621" y="197" key="SettingsEditor" timestamp="1615788213227">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="368" y="58" key="SettingsEditor" timestamp="1615801254100">
+      <screen x="0" y="0" width="1366" height="768" />
     </state>
+    <state x="368" y="58" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1615801254100" />
     <state x="621" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1615788213227" />
     <state x="1039" y="256" width="585" height="534" key="find.popup" timestamp="1615791104666">
       <screen x="0" y="0" width="1920" height="1040" />
