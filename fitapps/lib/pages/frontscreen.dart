@@ -1,3 +1,5 @@
+import 'package:fitapps/pages/singin.dart';
+import 'package:fitapps/pages/singup.dart';
 import 'package:flutter/material.dart';
 
 class frontscreen extends StatefulWidget {
@@ -10,15 +12,49 @@ class _frontscreenState extends State<frontscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      endDrawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+                child: Text('Drawer Header'),
+              decoration: BoxDecoration(
+                color:Colors.blue,
+              ),
+            ),
+            ListTile(
+              title: Text('Home'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Signin'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Singin()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Setting'),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        )
+      ),
       body: SingleChildScrollView(
         child: Container(
           child: Column(
               children: <Widget>[
                 SizedBox(height: 2,),
                 makeList1(image: 'assets/image/virus.png', tag: 'red'),
-                makeList2(image: 'assets/image/upper.png', tag: 'red'),
-                makeList3(image: 'assets/image/lower.png', tag: 'red'),
-                makeList4(image: 'assets/image/back.png', tag: 'red'),
+                makeList2(image: 'assets/image/upper.png', tag: 'blue'),
+                makeList3(image: 'assets/image/lower.png', tag: 'cyan'),
+                makeList4(image: 'assets/image/back.png', tag: 'orange'),
               ]),
         ),
       ),
