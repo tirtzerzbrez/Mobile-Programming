@@ -7,7 +7,8 @@ class Singin extends StatelessWidget {
       appBar: AppBar(),
       body: Container(
         decoration: BoxDecoration(
-            image: DecorationImage(image: AssetImage('image/barbelman.jpg'))),
+            image: DecorationImage(
+                image: AssetImage('assets/image/barbelman.jpg'))),
       ),
     );
   }
