@@ -6,10 +6,23 @@ class Singin extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        decoration: BoxDecoration(
+          constraints: BoxConstraints.expand(),
+          decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/image/barbelman.jpg'))),
-      ),
+              image: AssetImage('assets/image/barbelguy.jpg'),
+              fit: BoxFit.cover,
+            ),
+          ),
+          child: Row(children: [
+            Text(
+              "Sign In",
+              style: TextStyle(color: Colors.red),
+            ),
+            Text(
+              "Sign Up",
+              style: TextStyle(color: Colors.grey),
+            ),
+          ])),
     );
   }
 }
