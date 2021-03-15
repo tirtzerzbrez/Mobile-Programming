@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Singin extends StatelessWidget {
+class Singup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

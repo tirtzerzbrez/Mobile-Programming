@@ -13,13 +13,13 @@ class _frontscreenState extends State<frontscreen> {
       body: SingleChildScrollView(
         child: Container(
           child: Column(
-            children: <Widget>[
-              SizedBox(height: 2,),
-              makeList1(image: 'assets/image/virus.png', tag: 'red'),
-              makeList2(image: 'assets/image/upper.png', tag: 'red'),
-              makeList3(image: 'assets/image/lower.png', tag: 'red'),
-              makeList4(image: 'assets/image/back.png', tag: 'red'),
-          ]),
+              children: <Widget>[
+                SizedBox(height: 2,),
+                makeList1(image: 'assets/image/virus.png', tag: 'red'),
+                makeList2(image: 'assets/image/upper.png', tag: 'red'),
+                makeList3(image: 'assets/image/lower.png', tag: 'red'),
+                makeList4(image: 'assets/image/back.png', tag: 'red'),
+              ]),
         ),
       ),
     );
@@ -30,37 +30,37 @@ class _frontscreenState extends State<frontscreen> {
       tag: tag,
       child: GestureDetector(
         child: Center(
-        child: Container(
-          height: 140,
-          width: 370,
-          padding: EdgeInsets.all(10),
-          margin: EdgeInsets.only(top: 35, bottom: 70),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.fitWidth,
+          child: Container(
+            height: 140,
+            width: 370,
+            padding: EdgeInsets.all(10),
+            margin: EdgeInsets.only(top: 35, bottom: 70),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              image: DecorationImage(
+                image: AssetImage(image),
+                fit: BoxFit.fitWidth,
+              ),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text("fitur khusus pandemi\nCovid-19", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
+                          ]
+                      ),
+                    )
+                  ],
+                )
+              ],
             ),
           ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text("fitur khusus pandemi\nCovid-19", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
-                        ]
-                    ),
-                  )
-                ],
-              )
-            ],
-          ),
-        ),
         ),
       ),
     );
@@ -91,7 +91,7 @@ class _frontscreenState extends State<frontscreen> {
                   children: <Widget>[
                     Expanded(
                       child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text("Upper Body", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
                           ]
