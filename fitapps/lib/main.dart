@@ -1,4 +1,5 @@
 import 'package:fitapps/pages/frontscreen.dart';
+import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'fitapps',
-      home: frontscreen(),
+      home: Singin(),
     );
   }
 }
