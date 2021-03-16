@@ -3,7 +3,12 @@ import 'package:fitapps/pages/memberonly.dart';
 import 'package:fitapps/pages/singup.dart';
 import 'package:flutter/material.dart';
 
-class Singin extends StatelessWidget {
+class Singin extends StatefulWidget {
+  @override
+  _SinginState createState() => _SinginState();
+}
+
+class _SinginState extends State<Singin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
