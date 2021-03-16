@@ -16,20 +16,26 @@ class _frontscreenState extends State<frontscreen> {
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-                child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color:Colors.blue,
+            UserAccountsDrawerHeader(
+                accountName: Text('Tom'),
+                accountEmail: Text('tom@gmail.com'),
+              currentAccountPicture: CircleAvatar(
+                child: ClipOval(
+                  child: Image.asset('assets/image/profile.png'),
+                  ),
+                ),
               ),
-            ),
             ListTile(
-              title: Text('Home'),
+              title: Text('Berita Covid', style: TextStyle(fontSize: 18)),
+              leading: Icon(Icons.new_releases, color: Colors.red),
               onTap: () {
                 Navigator.pop(context);
               },
             ),
+            Divider(),
             ListTile(
               title: Text('Signin'),
+              leading: Icon(Icons.vpn_key_outlined),
               onTap: () {
                 Navigator.push(
                   context,
@@ -38,7 +44,8 @@ class _frontscreenState extends State<frontscreen> {
               },
             ),
             ListTile(
-              title: Text('Setting'),
+              title: Text('Tentang Developer'),
+              leading: Icon(Icons.info_outline),
               onTap: () {
                 Navigator.pop(context);
               },
