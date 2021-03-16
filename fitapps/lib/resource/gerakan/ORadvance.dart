@@ -5,7 +5,7 @@ class Upperbody {
   Upperbody({this.gambar, this.nama, this.instruksi, this.index});
 }
 
-final upperbeginnerchest = [
+final upperadvancechest = [
   [
     Upperbody(
       index: 1,

@@ -19,14 +19,14 @@ class Singin extends StatelessWidget {
                     alignment: Alignment(-0.7, -0.85),
                     child: Text("Sign In",
                         style: TextStyle(
-                            color: Colors.grey,
+                            color: Colors.red,
                             fontSize: 55,
                             fontWeight: FontWeight.bold))),
                 Align(
                     alignment: Alignment(-0.7, -0.65),
                     child: Text("Sign Up",
                         style: TextStyle(
-                            color: Colors.red,
+                            color: Colors.grey,
                             fontSize: 55,
                             fontWeight: FontWeight.bold))),
                 Align(
@@ -74,7 +74,7 @@ class Singin extends StatelessWidget {
                       padding: EdgeInsets.only(left: 20),
                       child: FlatButton(
                         child: Text(
-                          "Register",
+                          "Login",
                           style: TextStyle(fontSize: 20),
                         ),
                         color: Colors.red,
