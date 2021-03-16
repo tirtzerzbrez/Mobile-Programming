@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:fitapps/pages/singin.dart';
+import 'package:fitapps/pages/frontscreen.dart';
 
 void main() => runApp(MaterialApp(
-  home: MemberOnly(),
-));
+      home: MemberOnly(),
+    ));
 
 class MemberOnly extends StatelessWidget {
   @override
@@ -11,7 +12,7 @@ class MemberOnly extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'profile',
+          'Profile',
           style: TextStyle(
             fontSize: 25.0,
           ),
@@ -50,7 +51,12 @@ class MemberOnly extends StatelessWidget {
                 ),
                 SizedBox(width: 20.0),
                 RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (context) => frontscreen()),
+                        (route) => false);
+                  },
                   child: Text('Log Out'),
                 ),
               ],
