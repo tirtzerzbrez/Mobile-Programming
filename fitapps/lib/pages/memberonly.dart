@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:fitapps/pages/frontscreen.dart';
 
-void main() => runApp(MaterialApp(
-      home: MemberOnly(),
-    ));
+class MemberOnly extends StatefulWidget {
+  @override
+  _MemberOnlyState createState() => _MemberOnlyState();
+}
 
-class MemberOnly extends StatelessWidget {
+class _MemberOnlyState extends State<MemberOnly> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
