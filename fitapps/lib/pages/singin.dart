@@ -1,4 +1,5 @@
 import 'package:fitapps/pages/frontscreen.dart';
+import 'package:fitapps/pages/memberonly.dart';
 import 'package:fitapps/pages/singup.dart';
 import 'package:flutter/material.dart';
 
@@ -93,7 +94,7 @@ class Singin extends StatelessWidget {
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => frontscreen()),
+                                  builder: (context) => MemberOnly()),
                               (route) => false);
                         },
                       )),
