@@ -1,3 +1,4 @@
+import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
 class Singup extends StatelessWidget {
@@ -17,11 +18,16 @@ class Singup extends StatelessWidget {
               children: [
                 Align(
                     alignment: Alignment(-0.7, -0.85),
-                    child: Text("Sign In",
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 55,
-                            fontWeight: FontWeight.bold))),
+                    child: InkWell(
+                      child: Text("Sign In",
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 55,
+                              fontWeight: FontWeight.bold)),
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    )),
                 Align(
                     alignment: Alignment(-0.7, -0.65),
                     child: Text("Sign Up",
@@ -80,7 +86,9 @@ class Singup extends StatelessWidget {
                         color: Colors.red,
                         textColor: Colors.white,
                         padding: EdgeInsets.all(8.0),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                       )),
                 )
               ],
