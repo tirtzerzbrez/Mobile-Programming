@@ -1,4 +1,5 @@
 import 'package:fitapps/pages/frontscreen.dart';
+import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
