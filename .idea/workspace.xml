@@ -10,35 +10,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2d38758f-ac39-4fee-8b1c-9d7ec05fc4c9" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+    <list default="true" id="b1ba9ef4-fd26-4ef8-808f-39811cb4ac06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.lock" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" afterDir="false" />
->>>>>>> ef33a293caa4dfb68a3edd2af623085b0acad045
+      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dart File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1pmVAtFR5nB23FKdrsfv0tAX8Z9" />
+  <component name="ProjectId" id="1pp98y3C7PwUhVzcyN0KFpZWLKy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -46,43 +31,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="io.flutter.reload.alreadyRun" value="true" />
-<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Flutter/flutter/bin/cache/dart-sdk" />
-=======
-    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/P@kedex" />
->>>>>>> ef33a293caa4dfb68a3edd2af623085b0acad045
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunManager" selected="Flutter.main.dart">
-    <configuration name="main.dart" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/fitapps/lib/main.dart" />
-      <option name="workingDirectory" value="$PROJECT_DIR$/fitapps" />
-      <method v="2" />
-    </configuration>
-    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
-      <option name="filePath" value="$PROJECT_DIR$/fitapps/lib/main.dart" />
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Flutter.main.dart" />
-        <item itemvalue="Dart Command Line App.main.dart" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="2d38758f-ac39-4fee-8b1c-9d7ec05fc4c9" name="Default Changelist" comment="" />
-      <created>1615788111844</created>
+      <changelist id="b1ba9ef4-fd26-4ef8-808f-39811cb4ac06" name="Default Changelist" comment="" />
+      <created>1615869008846</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1615788111844</updated>
+      <updated>1615869008846</updated>
     </task>
     <servers />
   </component>
@@ -99,70 +63,13 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615788721050">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615788721050" />
-<<<<<<< HEAD
-    <state x="339" y="64" width="854" height="608" key="AVDManager" timestamp="1615803191316">
+    <state x="468" y="145" key="FileChooserDialogImpl" timestamp="1615869440703">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="339" y="64" width="854" height="608" key="AVDManager/0.0.1366.768@0.0.1366.768" timestamp="1615803191316" />
-    <state x="520" y="141" width="1200" height="822" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615788326682" />
-    <state x="640" y="227" key="FileChooserDialogImpl" timestamp="1615801251486">
+    <state x="468" y="145" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615869440703" />
+    <state x="189" y="35" key="SettingsEditor" timestamp="1615869442341">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="640" y="227" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615801251486" />
-    <state x="900" y="307" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615788196115" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1615789259570">
-=======
-    <state x="520" y="141" width="1200" height="822" key="AVDManager" timestamp="1615811008993">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="520" y="141" width="1200" height="822" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615811008993" />
-    <state x="900" y="307" key="FileChooserDialogImpl" timestamp="1615813851075">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="900" y="307" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615813851075" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1615817137098">
->>>>>>> ef33a293caa4dfb68a3edd2af623085b0acad045
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1615817137098" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1615817137098">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1615817137098" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1615817137097">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1615817137097" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1615817137098">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-<<<<<<< HEAD
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615789259570" />
-    <state x="368" y="58" key="SettingsEditor" timestamp="1615801254100">
-      <screen x="0" y="0" width="1366" height="768" />
-=======
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615817137098" />
-    <state x="621" y="197" key="SettingsEditor" timestamp="1615788213227">
-      <screen x="0" y="0" width="1920" height="1040" />
->>>>>>> ef33a293caa4dfb68a3edd2af623085b0acad045
-    </state>
-    <state x="368" y="58" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1615801254100" />
-    <state x="621" y="197" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1615788213227" />
-    <state x="1039" y="256" width="585" height="534" key="find.popup" timestamp="1615791104666">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1039" y="256" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615791104666" />
-    <state x="419" y="303" key="run.anything.popup" timestamp="1615805665946">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="419" y="303" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615805665946" />
-    <state x="973" y="361" width="672" height="678" key="search.everywhere.popup" timestamp="1615789868500">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="973" y="361" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1615789868500" />
+    <state x="189" y="35" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1615869442341" />
   </component>
 </project>
