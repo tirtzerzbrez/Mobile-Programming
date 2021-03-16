@@ -1,7 +1,12 @@
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
-class Singup extends StatelessWidget {
+class Singup extends StatefulWidget {
+  @override
+  _SingupState createState() => _SingupState();
+}
+
+class _SingupState extends State<Singup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
