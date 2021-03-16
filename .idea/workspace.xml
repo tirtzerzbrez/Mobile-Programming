@@ -11,15 +11,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba9ef4-fd26-4ef8-808f-39811cb4ac06" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/components/indonesia.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/components/world.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/pages/covid.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/providers/corona_provider.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/providers/indonesia_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/providers/world_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fitapps/lib/widgets/summary_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Dart File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +52,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/P@kedex" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -81,31 +97,39 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615871438669" />
-    <state x="520" y="141" width="1200" height="822" key="AVDManager" timestamp="1615871386112">
+    <state x="209" y="644" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1615899250890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="520" y="141" width="1200" height="822" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615871386112" />
+    <state x="209" y="644" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1615899250890" />
+    <state x="1128" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1615900978416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1128" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615900978416" />
+    <state x="520" y="141" width="1200" height="822" key="AVDManager" timestamp="1615898299609">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="520" y="141" width="1200" height="822" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1615898299609" />
     <state x="658" y="196" key="FileChooserDialogImpl" timestamp="1615874487628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="468" y="145" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615869440703" />
     <state x="658" y="196" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1615874487628" />
-    <state width="1367" height="280" key="GridCell.Tab.0.bottom" timestamp="1615874756888">
+    <state width="1340" height="275" key="GridCell.Tab.0.bottom" timestamp="1615901211169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1367" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1615874756888" />
-    <state width="1367" height="280" key="GridCell.Tab.0.center" timestamp="1615874756888">
+    <state width="1340" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1615901211169" />
+    <state width="1340" height="275" key="GridCell.Tab.0.center" timestamp="1615901211168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1367" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1615874756888" />
-    <state width="1367" height="280" key="GridCell.Tab.0.left" timestamp="1615874756887">
+    <state width="1340" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1615901211168" />
+    <state width="1340" height="275" key="GridCell.Tab.0.left" timestamp="1615901211168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1367" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1615874756887" />
-    <state width="1367" height="280" key="GridCell.Tab.0.right" timestamp="1615874756888">
+    <state width="1340" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1615901211168" />
+    <state width="1340" height="275" key="GridCell.Tab.0.right" timestamp="1615901211169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1367" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615874756888" />
+    <state width="1340" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1615901211169" />
     <state x="266" y="47" key="SettingsEditor" timestamp="1615871427324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
