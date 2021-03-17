@@ -111,7 +111,7 @@ class _MemberOnlyState extends State<MemberOnly> {
                     ),
                     RaisedButton(
                       onPressed: () {},
-                      child: Text('Uupdate'),
+                      child: Text('Update'),
                     )
                   ],
                 ),
