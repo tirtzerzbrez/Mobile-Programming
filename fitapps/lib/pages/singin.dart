@@ -1,3 +1,5 @@
+import 'package:fitapps/pages/frontscreen.dart';
+import 'package:fitapps/pages/singup.dart';
 import 'package:flutter/material.dart';
 
 class Singin extends StatelessWidget {
@@ -23,12 +25,19 @@ class Singin extends StatelessWidget {
                             fontSize: 55,
                             fontWeight: FontWeight.bold))),
                 Align(
-                    alignment: Alignment(-0.7, -0.65),
+                  alignment: Alignment(-0.7, -0.65),
+                  child: InkWell(
                     child: Text("Sign Up",
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 55,
-                            fontWeight: FontWeight.bold))),
+                            fontWeight: FontWeight.bold)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Singup()));
+                    },
+                  ),
+                ),
                 Align(
                     alignment: Alignment(-0.5, -0.3),
                     child: Container(
@@ -80,7 +89,13 @@ class Singin extends StatelessWidget {
                         color: Colors.red,
                         textColor: Colors.white,
                         padding: EdgeInsets.all(8.0),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => frontscreen()),
+                              (route) => false);
+                        },
                       )),
                 )
               ],
