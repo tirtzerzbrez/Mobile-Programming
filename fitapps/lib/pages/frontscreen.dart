@@ -13,7 +13,9 @@ class _frontscreenState extends State<frontscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      ),
       endDrawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,

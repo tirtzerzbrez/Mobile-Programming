@@ -25,8 +25,10 @@ class _CoronaState extends State<Corona> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(),
+      backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      ),
       body: Column(
         children: [
           Padding(
@@ -102,7 +104,7 @@ class _CoronaState extends State<Corona> {
                     height: 100,
                     padding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
                     decoration: BoxDecoration(
-                      color: Colors.redAccent,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Column(
