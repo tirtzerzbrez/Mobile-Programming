@@ -27,6 +27,10 @@ class _SingupState extends State<Singup> {
       validator: (String value) {
         if (value.isEmpty) {
           return "Username is required";
+        } else {
+          setState(() {
+            _username = value;
+          });
         }
       },
       onSaved: (String value) {
@@ -51,6 +55,10 @@ class _SingupState extends State<Singup> {
       validator: (String value) {
         if (value.isEmpty) {
           return 'Password is required';
+        } else {
+          setState(() {
+            _password = value;
+          });
         }
       },
       onSaved: (String value) {
