@@ -9,6 +9,58 @@ class Singin extends StatefulWidget {
 }
 
 class _SinginState extends State<Singin> {
+  String _username;
+  String _password;
+
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+
+  Widget _buildname() {
+    return TextFormField(
+      decoration: InputDecoration(
+          labelText: "Username",
+          filled: true,
+          fillColor: Colors.white,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.blueAccent,
+            ),
+            borderRadius: BorderRadius.circular(10.0),
+          )),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return "Username is required";
+        }
+      },
+      onSaved: (String value) {
+        _username = value;
+      },
+    );
+  }
+
+  Widget _buildpass() {
+    return TextFormField(
+      obscureText: true,
+      decoration: InputDecoration(
+          labelText: 'Password',
+          filled: true,
+          fillColor: Colors.white,
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(
+              color: Colors.blueAccent,
+            ),
+            borderRadius: BorderRadius.circular(10.0),
+          )),
+      validator: (String value) {
+        if (value.isEmpty) {
+          return 'Password is required';
+        }
+      },
+      onSaved: (String value) {
+        _password = value;
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,87 +75,94 @@ class _SinginState extends State<Singin> {
             ),
             child: Stack(
               children: [
-                Align(
-                    alignment: Alignment(-0.7, -0.85),
-                    child: Text("Sign In",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontSize: 55,
-                            fontWeight: FontWeight.bold))),
-                Align(
-                  alignment: Alignment(-0.7, -0.65),
-                  child: InkWell(
-                    child: Text("Sign Up",
-                        style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 55,
-                            fontWeight: FontWeight.bold)),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Singup()));
-                    },
+                Container(
+                  margin: EdgeInsets.all(25),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 50,
+                        ),
+                        Text("Sign In",
+                            style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 55,
+                                fontWeight: FontWeight.bold)),
+                      ],
+                    ),
                   ),
                 ),
-                Align(
-                    alignment: Alignment(-0.5, -0.3),
-                    child: Container(
-                      width: 350,
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.blueAccent,
-                                ),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              hintText: "Email/Username",
-                              hintStyle: TextStyle(fontSize: 20))),
-                    )),
-                Align(
-                    alignment: Alignment(-0.5, -0.1),
-                    child: Container(
-                      width: 350,
-                      height: 50,
-                      padding: EdgeInsets.only(left: 20),
-                      child: TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.blueAccent,
-                                ),
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              hintText: "Password",
-                              hintStyle: TextStyle(fontSize: 20))),
-                    )),
-                Align(
-                  alignment: Alignment(-0.5, 0.2),
-                  child: Container(
-                      width: 350,
-                      padding: EdgeInsets.only(left: 20),
-                      child: FlatButton(
-                        child: Text(
-                          "Login",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                        color: Colors.red,
-                        textColor: Colors.white,
-                        padding: EdgeInsets.all(8.0),
-                        onPressed: () {
-                          Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => MemberOnly()),
-                              (route) => false);
-                        },
-                      )),
-                )
+                Container(
+                  margin: EdgeInsets.all(25),
+                  child: SingleChildScrollView(
+                    child: Column(children: [
+                      SizedBox(
+                        height: 125,
+                      ),
+                      Text("Sign Up",
+                          style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 55,
+                              fontWeight: FontWeight.bold)),
+                    ]),
+                  ),
+                ),
+                Container(
+                    margin: EdgeInsets.all(25),
+                    child: SingleChildScrollView(
+                        child: Form(
+                            key: _formkey,
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  SizedBox(height: 200),
+                                  _buildname(),
+                                  SizedBox(height: 25),
+                                  _buildpass(),
+                                  SizedBox(height: 20),
+                                  SizedBox(
+                                    width: 350,
+                                    child: FlatButton(
+                                      child: Text(
+                                        "Login",
+                                        style: TextStyle(fontSize: 20),
+                                      ),
+                                      color: Colors.red,
+                                      textColor: Colors.white,
+                                      padding: EdgeInsets.all(8.0),
+                                      onPressed: () {
+                                        if (!_formkey.currentState.validate()) {
+                                          return;
+                                        } else {
+                                          Navigator.pushAndRemoveUntil(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      MemberOnly()),
+                                              (route) => false);
+                                        }
+                                      },
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                  ),
+                                  FlatButton(
+                                    child: Text(
+                                      "Register New Account",
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                    color: Colors.red,
+                                    textColor: Colors.white,
+                                    padding: EdgeInsets.all(8.0),
+                                    onPressed: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) => Singup()));
+                                    },
+                                  )
+                                ]))))
               ],
             )));
   }
