@@ -1,3 +1,4 @@
+import 'package:fitapps/db/databasepvdr.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
