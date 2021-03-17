@@ -66,7 +66,7 @@ class _CoronaState extends State<Coronaglobal> {
                       child: Text(
                         'Indonesia',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: Colors.white,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

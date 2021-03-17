@@ -31,7 +31,10 @@ class _frontscreenState extends State<frontscreen> {
               title: Text('Berita Covid', style: TextStyle(fontSize: 18)),
               leading: Icon(Icons.new_releases, color: Colors.red),
               onTap: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Corona()),
+                );
               },
             ),
             Divider(),
