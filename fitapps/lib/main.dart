@@ -9,12 +9,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return S(
-      child: MaterialApp(
+      return MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'fitapps',
         home: frontscreen(),
-      ),
-    );
+      );
   }
 }

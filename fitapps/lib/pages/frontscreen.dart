@@ -1,3 +1,4 @@
+import 'package:fitapps/pages/covid19.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,12 @@ class _frontscreenState extends State<frontscreen> {
     return Hero(
       tag: tag,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Corona()),
+          );
+        },
         child: Center(
           child: Container(
             height: 140,
