@@ -162,8 +162,14 @@ class _SinginState extends State<Singin> {
                                               builder: (context) => Singup()));
                                     },
                                   )
-                                ]))))
+                                ]
+                            )
+                        )
+                    )
+                )
               ],
-            )));
+            )
+        )
+    );
   }
 }

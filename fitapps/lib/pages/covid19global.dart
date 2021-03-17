@@ -28,8 +28,10 @@ class _CoronaState extends State<Coronaglobal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
-      appBar: AppBar(),
+      backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      ),
       body: Column(
         children: [
           Padding(
@@ -104,7 +106,7 @@ class _CoronaState extends State<Coronaglobal> {
                     height: 100,
                     padding: EdgeInsets.symmetric(vertical: 16, horizontal: 12),
                     decoration: BoxDecoration(
-                      color: Colors.redAccent,
+                      color: Colors.blue,
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Column(
@@ -201,7 +203,7 @@ class _CoronaState extends State<Coronaglobal> {
               return Text(
                 "${snapshot.data["value"]}",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 26,
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
