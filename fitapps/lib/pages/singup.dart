@@ -153,7 +153,25 @@ class _SingupState extends State<Singup> {
                                           if (hasil == 1) {
                                             return;
                                           } else {
-                                            Navigator.pop(context);
+                                            showDialog(
+                                                context: context,
+                                                builder:
+                                                    (BuildContext context) {
+                                                  return AlertDialog(
+                                                    title: Text("Attention !"),
+                                                    content: Text(
+                                                        "Username anda sudah dipakai!"),
+                                                    actions: <Widget>[
+                                                      new FlatButton(
+                                                        child: Text("OK"),
+                                                        onPressed: () {
+                                                          Navigator.pop(
+                                                              context);
+                                                        },
+                                                      )
+                                                    ],
+                                                  );
+                                                });
                                           }
                                         }
                                       },

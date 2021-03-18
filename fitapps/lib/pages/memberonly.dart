@@ -47,8 +47,6 @@ class _MemberOnlyState extends State<MemberOnly> {
                   style: TextStyle(fontWeight: FontWeight.bold)),
               Text('Berat Ideal     :',
                   style: TextStyle(fontWeight: FontWeight.bold)),
-              Text('Resiko            :',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
               SizedBox(height: 20),
               Row(
                 children: <Widget>[

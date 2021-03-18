@@ -54,17 +54,18 @@ class Databasepvdr {
     List checker = await db
         .rawQuery('SELECT id FROM usertbl WHERE username LIKE "${datauser}"');
     if (checker.length != 0) {
+      await db.rawDelete('DELETE FROM usertbl WHERE id = "$databasemdl.id"');
       return 1;
     } else {
       return 0;
     }
   }
 
-  Future query(String username) async {
+  Future query(String username, String password) async {
     final db = await database;
     print(username);
-    List datauser = await db
-        .rawQuery('SELECT id FROM usertbl WHERE username LIKE "$username"');
+    List datauser = await db.rawQuery(
+        'SELECT id FROM usertbl WHERE LOWER(username) LIKE LOWER("$username") AND password LIKE LOWER("$password")');
     List res = datauser;
     if (datauser.length != 0) {
       print(res);
