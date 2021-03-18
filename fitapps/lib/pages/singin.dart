@@ -148,9 +148,9 @@ class _SinginState extends State<Singin> {
                                           return;
                                         } else {
                                           String username = _username;
-                                          print(username);
+                                          String password = _password;
                                           int hsl = await Databasepvdr.db
-                                              .query(username);
+                                              .query(username, password);
                                           if (hsl == 1) {
                                             Navigator.pushAndRemoveUntil(
                                                 context,
@@ -159,7 +159,25 @@ class _SinginState extends State<Singin> {
                                                         MemberOnly()),
                                                 (route) => false);
                                           } else {
-                                            return;
+                                            showDialog(
+                                                context: context,
+                                                builder:
+                                                    (BuildContext context) {
+                                                  return AlertDialog(
+                                                    title: Text("Attention !"),
+                                                    content: Text(
+                                                        "Username / Password anda salah !"),
+                                                    actions: <Widget>[
+                                                      new FlatButton(
+                                                        child: Text("OK"),
+                                                        onPressed: () {
+                                                          Navigator.pop(
+                                                              context);
+                                                        },
+                                                      )
+                                                    ],
+                                                  );
+                                                });
                                           }
                                         }
                                       },
