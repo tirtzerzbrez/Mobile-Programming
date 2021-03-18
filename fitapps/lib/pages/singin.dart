@@ -1,3 +1,5 @@
+import 'package:fitapps/db/databasemdl.dart';
+import 'package:fitapps/db/databasepvdr.dart';
 import 'package:fitapps/pages/frontscreen.dart';
 import 'package:fitapps/pages/memberonly.dart';
 import 'package:fitapps/pages/singup.dart';
@@ -11,6 +13,7 @@ class Singin extends StatefulWidget {
 class _SinginState extends State<Singin> {
   String _username;
   String _password;
+  List<Databasemdl> users;
 
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
 
@@ -29,6 +32,10 @@ class _SinginState extends State<Singin> {
       validator: (String value) {
         if (value.isEmpty) {
           return "Username is required";
+        } else {
+          setState(() {
+            _username = value;
+          });
         }
       },
       onSaved: (String value) {
@@ -53,6 +60,10 @@ class _SinginState extends State<Singin> {
       validator: (String value) {
         if (value.isEmpty) {
           return 'Password is required';
+        } else {
+          setState(() {
+            _password = value;
+          });
         }
       },
       onSaved: (String value) {
@@ -130,16 +141,24 @@ class _SinginState extends State<Singin> {
                                       color: Colors.red,
                                       textColor: Colors.white,
                                       padding: EdgeInsets.all(8.0),
-                                      onPressed: () {
+                                      onPressed: () async {
                                         if (!_formkey.currentState.validate()) {
                                           return;
                                         } else {
-                                          Navigator.pushAndRemoveUntil(
-                                              context,
-                                              MaterialPageRoute(
-                                                  builder: (context) =>
-                                                      MemberOnly()),
-                                              (route) => false);
+                                          String username = _username;
+                                          print(username);
+                                          int hsl = await Databasepvdr.db
+                                              .query(username);
+                                          if (hsl == 1) {
+                                            Navigator.pushAndRemoveUntil(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        MemberOnly()),
+                                                (route) => false);
+                                          } else {
+                                            return;
+                                          }
                                         }
                                       },
                                     ),
