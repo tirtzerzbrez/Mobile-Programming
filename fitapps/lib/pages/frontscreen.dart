@@ -17,59 +17,80 @@ class _frontscreenState extends State<frontscreen> {
         backgroundColor: Color.fromRGBO(128, 0, 0, 1),
       ),
       endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            UserAccountsDrawerHeader(
-                accountName: Text('Tom'),
-                accountEmail: Text('tom@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                child: ClipOval(
-                  child: Image.asset('assets/image/profile.png'),
-                  ),
-                ),
+          child: ListView(
+        padding: EdgeInsets.zero,
+        children: <Widget>[
+          UserAccountsDrawerHeader(
+            accountName: Text('Tom'),
+            accountEmail: Text('tom@gmail.com'),
+            currentAccountPicture: CircleAvatar(
+              child: ClipOval(
+                child: Image.asset('assets/image/profile.png'),
               ),
-            ListTile(
-              title: Text('Berita Covid', style: TextStyle(fontSize: 18)),
-              leading: Icon(Icons.new_releases, color: Colors.red),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Corona()),
-                );
-              },
             ),
-            Divider(),
-            ListTile(
-              title: Text('Signin'),
-              leading: Icon(Icons.vpn_key_outlined),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Singin()),
-                );
-              },
-            ),
-            ListTile(
-              title: Text('Tentang Developer'),
-              leading: Icon(Icons.info_outline),
-              onTap: () {
-                Navigator.pop(context);
-              },
-            ),
-          ],
-        )
-      ),
+          ),
+          ListTile(
+            title: Text('Berita Covid', style: TextStyle(fontSize: 18)),
+            leading: Icon(Icons.new_releases, color: Colors.red),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Corona()),
+              );
+            },
+          ),
+          Divider(),
+          ListTile(
+            title: Text('Signin'),
+            leading: Icon(Icons.vpn_key_outlined),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Singin()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Tentang Developer'),
+            leading: Icon(Icons.info_outline),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('Home'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+          ListTile(
+            title: Text('Signin'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Singin()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Setting'),
+            onTap: () {
+              Navigator.pop(context);
+            },
+          ),
+        ],
+      )),
       body: SingleChildScrollView(
         child: Container(
-          child: Column(
-              children: <Widget>[
-                SizedBox(height: 2,),
-                makeList1(image: 'assets/image/virus.png', tag: 'red'),
-                makeList2(image: 'assets/image/upper.png', tag: 'blue'),
-                makeList3(image: 'assets/image/lower.png', tag: 'cyan'),
-                makeList4(image: 'assets/image/back.png', tag: 'orange'),
-              ]),
+          child: Column(children: <Widget>[
+            SizedBox(
+              height: 2,
+            ),
+            makeList1(image: 'assets/image/virus.png', tag: 'red'),
+            makeList2(image: 'assets/image/upper.png', tag: 'blue'),
+            makeList3(image: 'assets/image/lower.png', tag: 'cyan'),
+            makeList4(image: 'assets/image/back.png', tag: 'orange'),
+          ]),
         ),
       ),
     );
@@ -108,9 +129,14 @@ class _frontscreenState extends State<frontscreen> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("fitur khusus pandemi\nCovid-19", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
-                          ]
-                      ),
+                            Text(
+                              "fitur khusus pandemi\nCovid-19",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                     )
                   ],
                 )
@@ -149,9 +175,14 @@ class _frontscreenState extends State<frontscreen> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Upper Body", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
-                          ]
-                      ),
+                            Text(
+                              "Upper Body",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                     )
                   ],
                 )
@@ -190,9 +221,14 @@ class _frontscreenState extends State<frontscreen> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Lower Body", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
-                          ]
-                      ),
+                            Text(
+                              "Lower Body",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                     )
                   ],
                 )
@@ -231,9 +267,14 @@ class _frontscreenState extends State<frontscreen> {
                       child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text("Back", style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),)
-                          ]
-                      ),
+                            Text(
+                              "Back",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            )
+                          ]),
                     )
                   ],
                 )
