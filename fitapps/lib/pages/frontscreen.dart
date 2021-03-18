@@ -1,6 +1,9 @@
 import 'package:fitapps/pages/covid19.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
+import 'workout/atas.dart';
+import 'workout/bawah.dart';
+import 'workout/punggung.dart';
 
 // ignore: camel_case_types
 class frontscreen extends StatefulWidget {
@@ -53,27 +56,6 @@ class _frontscreenState extends State<frontscreen> {
           ListTile(
             title: Text('Tentang Developer'),
             leading: Icon(Icons.info_outline),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text('Home'),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text('Signin'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Singin()),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Setting'),
             onTap: () {
               Navigator.pop(context);
             },
@@ -152,6 +134,12 @@ class _frontscreenState extends State<frontscreen> {
     return Hero(
       tag: tag,
       child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Atas()),
+          );
+        },
         child: Center(
           child: Container(
             height: 105,
@@ -198,6 +186,12 @@ class _frontscreenState extends State<frontscreen> {
     return Hero(
       tag: tag,
       child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Bawah()),
+          );
+        },
         child: Center(
           child: Container(
             height: 105,
@@ -244,6 +238,12 @@ class _frontscreenState extends State<frontscreen> {
     return Hero(
       tag: tag,
       child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Punggung()),
+          );
+        },
         child: Center(
           child: Container(
             height: 105,

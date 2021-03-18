@@ -1,3 +1,4 @@
+import 'package:fitapps/db/databasemdl.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -43,5 +44,33 @@ class Databasepvdr {
           "$COLUMN_BMI REAL"
           ")");
     });
+  }
+
+  Future insert(Databasemdl databasemdl) async {
+    final db = await database;
+    databasemdl.id = await db.insert(TABLE_USER, databasemdl.toMap());
+    List datauser = await db.rawQuery(
+        'SELECT username FROM usertbl WHERE id LIKE "${databasemdl.id}"');
+    List checker = await db
+        .rawQuery('SELECT id FROM usertbl WHERE username LIKE "${datauser}"');
+    if (checker.length != 0) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  Future query(String username) async {
+    final db = await database;
+    print(username);
+    List datauser = await db
+        .rawQuery('SELECT id FROM usertbl WHERE username LIKE "$username"');
+    List res = datauser;
+    if (datauser.length != 0) {
+      print(res);
+      return 1;
+    } else {
+      return 0;
+    }
   }
 }
