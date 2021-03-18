@@ -31,31 +31,59 @@ class _MemberOnlyState extends State<MemberOnly> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Container(
-                width: 350.0,
-                color: Color.fromRGBO(128, 0, 0, 1),
+              Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('Nama',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Berat Badan',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Tinggi Badan',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Kategori',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text('Berat Ideal',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 5),
+                  Container(
+                    child: Column(
+                      children: <Widget>[
+                        Text(':',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(':',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(':',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(':',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                        Text(':',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              Text('Nama              :',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  )),
-              Text('Berat Badan   :',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              Text('Tinggi Badan :',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              Text('Kategori         :',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              Text('Berat Ideal     :',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              SizedBox(height: 20),
+              SizedBox(height: 15),
               Row(
                 children: <Widget>[
                   RaisedButton(
+                    color: Color.fromRGBO(128, 0, 0, 1),
                     onPressed: () {},
-                    child: Text('mulai olahraga'),
+                    child: Text(
+                      'mulai olahraga',
+                      style: TextStyle(color: Colors.white),
+                    ),
                   ),
                   SizedBox(width: 20.0),
                   RaisedButton(
+                    color: Color.fromRGBO(128, 0, 0, 1),
                     onPressed: () {
                       Navigator.pushAndRemoveUntil(
                           context,
@@ -63,25 +91,34 @@ class _MemberOnlyState extends State<MemberOnly> {
                               builder: (context) => frontscreen()),
                           (route) => false);
                     },
-                    child: Text('Log Out'),
+                    child:
+                        Text('Log Out', style: TextStyle(color: Colors.white)),
                   ),
                 ],
               ),
               SizedBox(height: 40.0),
               Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.grey[400],
+                ),
                 padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-                color: Colors.grey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text('BMI Calculator'),
+                    Text(
+                      'BMI Calculator',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                     SizedBox(height: 15.0),
                     Text('Berat Badan'),
                     SizedBox(height: 15.0),
                     TextField(
                       decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: 'Berat',
+                          hintText: 'Berat Badan',
                           filled: true,
                           fillColor: Colors.white,
                           enabledBorder: OutlineInputBorder(
@@ -109,8 +146,12 @@ class _MemberOnlyState extends State<MemberOnly> {
                       maxLength: 3,
                     ),
                     RaisedButton(
+                      color: Color.fromRGBO(128, 0, 0, 1),
                       onPressed: () {},
-                      child: Text('Update'),
+                      child: Text(
+                        'Update',
+                        style: TextStyle(color: Colors.white),
+                      ),
                     )
                   ],
                 ),
