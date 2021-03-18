@@ -1,3 +1,4 @@
+import 'package:fitapps/pages/CovidNews.dart';
 import 'package:fitapps/pages/covid19.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
@@ -24,21 +25,32 @@ class _frontscreenState extends State<frontscreen> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text('Tom'),
-            accountEmail: Text('tom@gmail.com'),
+            accountName: Text(
+                'Guest',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+              ),
+            ),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset('assets/image/profile.png'),
               ),
             ),
+            decoration: new BoxDecoration(
+              image: new  DecorationImage(
+                image: new AssetImage('assets/image/sidebardugdug.jpg'),
+                fit: BoxFit.cover,
+              )
+            ),
           ),
           ListTile(
-            title: Text('Berita Covid', style: TextStyle(fontSize: 18)),
+            title: Text('Covid-19', style: TextStyle(fontSize: 18)),
             leading: Icon(Icons.new_releases, color: Colors.red),
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => Corona()),
+                MaterialPageRoute(builder: (context) => berita()),
               );
             },
           ),
