@@ -69,9 +69,9 @@ class _MemberOnlyState extends State<MemberOnly> {
                   ),
                 ],
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: 40.0),
               Container(
-                padding: EdgeInsets.fromLTRB(10.0, 5.0, 247.0, 10.0),
+                padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
                 color: Colors.grey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
