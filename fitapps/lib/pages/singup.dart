@@ -1,3 +1,4 @@
+import 'package:fitapps/db/databasemdl.dart';
 import 'package:fitapps/db/databasepvdr.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
@@ -137,11 +138,21 @@ class _SingupState extends State<Singup> {
                                       color: Colors.red,
                                       textColor: Colors.white,
                                       padding: EdgeInsets.all(8.0),
-                                      onPressed: () {
+                                      onPressed: () async {
                                         if (!_formkey.currentState.validate()) {
                                           return;
                                         } else {
-                                          Navigator.pop(context);
+                                          Databasemdl userdet = Databasemdl(
+                                              username: _username,
+                                              password: _password);
+                                          print(_username);
+                                          int hasil = await Databasepvdr.db
+                                              .insert(userdet);
+                                          if (hasil == 1) {
+                                            return;
+                                          } else {
+                                            Navigator.pop(context);
+                                          }
                                         }
                                       },
                                     ),
