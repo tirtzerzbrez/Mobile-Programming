@@ -1,5 +1,5 @@
+import 'package:fitapps/pages/covid19.dart';
 import 'package:fitapps/pages/singin.dart';
-import 'package:fitapps/pages/singup.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -13,7 +13,9 @@ class _frontscreenState extends State<frontscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+      ),
       endDrawer: Drawer(
           child: ListView(
         padding: EdgeInsets.zero,
@@ -98,6 +100,12 @@ class _frontscreenState extends State<frontscreen> {
     return Hero(
       tag: tag,
       child: GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Corona()),
+          );
+        },
         child: Center(
           child: Container(
             height: 140,
