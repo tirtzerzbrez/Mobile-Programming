@@ -74,4 +74,14 @@ class Databasepvdr {
       return 0;
     }
   }
+
+  Future queryid(String username) async {
+    final db = await database;
+    print(username);
+    List datauser = await db.rawQuery(
+        'SELECT id,username,height,weight,bmi FROM usertbl WHERE LOWER(username) LIKE LOWER("$username")');
+    List res = datauser;
+    print(res);
+    return datauser;
+  }
 }

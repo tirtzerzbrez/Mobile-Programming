@@ -1,17 +1,50 @@
+import 'dart:ffi';
+
+import 'package:fitapps/db/databasepvdr.dart';
+import 'package:fitapps/db/fulldatamdl.dart';
 import 'package:flutter/material.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:fitapps/pages/frontscreen.dart';
+import 'dart:math';
 
 void main() => runApp(MaterialApp(
-      home: MemberOnly(),
+      home: MemberOnly(
+        query: null,
+      ),
     ));
 
 class MemberOnly extends StatefulWidget {
+  final String query;
+  MemberOnly({Key key, @required this.query}) : super(key: key);
   @override
   _MemberOnlyState createState() => _MemberOnlyState();
 }
 
 class _MemberOnlyState extends State<MemberOnly> {
+  var _tinggi = 0;
+  var _berat = 0;
+  double bmi = 0;
+  List<Map> id;
+  var nama;
+
+  List<Fulldatamdl> fullDetail;
+  getid() async {
+    if (fullDetail == null) {
+      fullDetail = new List<Fulldatamdl>();
+    }
+    id = await Databasepvdr.db.queryid(widget.query);
+    print(id);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    getid();
+    print(id);
+  }
+
+  final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,52 +102,87 @@ class _MemberOnlyState extends State<MemberOnly> {
               ),
               SizedBox(height: 40.0),
               Container(
-                padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
-                color: Colors.grey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text('BMI Calculator'),
-                    SizedBox(height: 15.0),
-                    Text('Berat Badan'),
-                    SizedBox(height: 15.0),
-                    TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Berat',
-                          filled: true,
-                          fillColor: Colors.white,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.blueAccent,
-                            ),
-                          )),
-                      keyboardType: TextInputType.number,
-                      maxLength: 3,
+                  padding: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+                  color: Colors.grey,
+                  child: Form(
+                    key: _formkey,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Text('BMI Calculator'),
+                        SizedBox(height: 15.0),
+                        Text('Berat Badan'),
+                        SizedBox(height: 15.0),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Berat',
+                              filled: true,
+                              fillColor: Colors.white,
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.blueAccent,
+                                ),
+                              )),
+                          keyboardType: TextInputType.number,
+                          maxLength: 3,
+                          validator: (String value) {
+                            if (value.isEmpty) {
+                              return "Berat is required";
+                            } else {
+                              setState(() {
+                                _berat = int.parse(value);
+                              });
+                            }
+                          },
+                          onSaved: (String value) {
+                            _berat = int.parse(value);
+                          },
+                        ),
+                        Text('Tinggi Badan'),
+                        SizedBox(height: 15.0),
+                        TextFormField(
+                          decoration: InputDecoration(
+                              border: OutlineInputBorder(),
+                              hintText: 'Tinggi Badan',
+                              filled: true,
+                              fillColor: Colors.white,
+                              enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                  color: Colors.grey,
+                                ),
+                              )),
+                          keyboardType: TextInputType.number,
+                          maxLength: 3,
+                          validator: (String value) {
+                            if (value.isEmpty) {
+                              return 'Tinggi is required';
+                            } else {
+                              setState(() {
+                                _tinggi = int.parse(value);
+                              });
+                            }
+                          },
+                          onSaved: (String value) {
+                            _tinggi = int.parse(value);
+                          },
+                        ),
+                        RaisedButton(
+                          onPressed: () {
+                            if (!_formkey.currentState.validate()) {
+                              return;
+                            } else {
+                              var berat = _berat;
+                              double tinggi = _tinggi / 100;
+                              bmi = berat / (pow(tinggi, 2));
+                              print(bmi);
+                            }
+                          },
+                          child: Text('Update'),
+                        )
+                      ],
                     ),
-                    Text('Tinggi Badan'),
-                    SizedBox(height: 15.0),
-                    TextField(
-                      decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: 'Tinggi Badan',
-                          filled: true,
-                          fillColor: Colors.white,
-                          enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.grey,
-                            ),
-                          )),
-                      keyboardType: TextInputType.number,
-                      maxLength: 3,
-                    ),
-                    RaisedButton(
-                      onPressed: () {},
-                      child: Text('Update'),
-                    )
-                  ],
-                ),
-              ),
+                  )),
             ],
           ),
         ),
