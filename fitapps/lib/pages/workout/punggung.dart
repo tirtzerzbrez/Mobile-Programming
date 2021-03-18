@@ -84,12 +84,19 @@ class _PunggungState extends State<Punggung> {
                                               textAlign: TextAlign.center,
                                             ),
                                             onTap: () => launch(back[i][j].url),
-                                          )
+                                          ),
+                                         
                                         ],
                                       ),
                                     ],
                                   ),
                                   contentPadding: EdgeInsets.all(40),
+                                   actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                   ]
                                 );
                               },
                             );

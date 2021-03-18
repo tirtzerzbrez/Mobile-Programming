@@ -47,51 +47,58 @@ class _SedangState extends State<Sedang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            interchest[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
-                                          ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Column(
-                                          children: [
-                                            Text(
-                                              "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              interchest[i][j].detail,
                                               style: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w600),
-                                              textAlign: TextAlign.center,
+                                                  fontSize: 15,
+                                                  color: Colors.white),
                                             ),
-                                            InkWell(
-                                              child: Text(
-                                                interchest[i][j].url,
+                                            padding: EdgeInsets.all(20),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                "\n  Masih bingung ? \n Klik link dibawah ini ",
                                                 style: TextStyle(
-                                                    color: Colors.blue),
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w600),
                                                 textAlign: TextAlign.center,
                                               ),
-                                              onTap: () =>
-                                                  launch(interchest[i][j].url),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                  );
+                                              InkWell(
+                                                child: Text(
+                                                  interchest[i][j].url,
+                                                  style: TextStyle(
+                                                      color: Colors.blue),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                                onTap: () => launch(
+                                                    interchest[i][j].url),
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
+                                        )
+                                      ]);
                                 },
                               );
                             },
@@ -142,47 +149,53 @@ class _SedangState extends State<Sedang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            interarm[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              interarm[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            interarm[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(interarm[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              interarm[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(interarm[i][j].url),
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                  );
+                                      ]);
                                 },
                               );
                             },
@@ -233,47 +246,53 @@ class _SedangState extends State<Sedang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            interback[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              interback[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            interback[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(interback[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              interback[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(interback[i][j].url),
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                  );
+                                      ]);
                                 },
                               );
                             },
@@ -324,47 +343,53 @@ class _SedangState extends State<Sedang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            lowerinter[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              lowerinter[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            lowerinter[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(lowerinter[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              lowerinter[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(lowerinter[i][j].url),
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                  );
+                                      ]);
                                 },
                               );
                             },
@@ -415,47 +440,53 @@ class _SedangState extends State<Sedang> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            interabs[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              interabs[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            interabs[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(interabs[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              interabs[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(interabs[i][j].url),
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                  );
+                                      ]);
                                 },
                               );
                             },

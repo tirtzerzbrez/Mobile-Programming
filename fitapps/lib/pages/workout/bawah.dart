@@ -85,12 +85,18 @@ class _BawahState extends State<Bawah> {
                                             ),
                                             onTap: () =>
                                                 launch(lower[i][j].url),
-                                          )
+                                          ),
                                         ],
                                       ),
                                     ],
                                   ),
                                   contentPadding: EdgeInsets.all(40),
+                                  actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                  ],
                                 );
                               },
                             );

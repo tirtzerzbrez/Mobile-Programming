@@ -91,6 +91,12 @@ class _WorkoutState extends State<Workout> {
                                       ],
                                     ),
                                     contentPadding: EdgeInsets.all(40),
+                                     actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                   ]
                                   );
                                 },
                               );
@@ -182,6 +188,12 @@ class _WorkoutState extends State<Workout> {
                                       ],
                                     ),
                                     contentPadding: EdgeInsets.all(40),
+                                     actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                   ]
                                   );
                                 },
                               );
@@ -364,6 +376,12 @@ class _WorkoutState extends State<Workout> {
                                       ],
                                     ),
                                     contentPadding: EdgeInsets.all(40),
+                                     actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                   ]
                                   );
                                 },
                               );
@@ -455,6 +473,12 @@ class _WorkoutState extends State<Workout> {
                                       ],
                                     ),
                                     contentPadding: EdgeInsets.all(40),
+                                     actions: [
+                                    FlatButton(
+                                      child: Text("Back"),
+                                      onPressed: () => Navigator.pop(context),
+                                    )
+                                   ]
                                   );
                                 },
                               );
