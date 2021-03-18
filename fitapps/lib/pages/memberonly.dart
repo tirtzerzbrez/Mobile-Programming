@@ -20,9 +20,10 @@ class _MemberOnlyState extends State<MemberOnly> {
           'Profile',
           style: TextStyle(
             fontSize: 25.0,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Colors.red,
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(30.0, 30.0, 30.0, 30.0),
@@ -32,7 +33,7 @@ class _MemberOnlyState extends State<MemberOnly> {
             children: <Widget>[
               Container(
                 width: 350.0,
-                color: Colors.red,
+                color: Color.fromRGBO(128, 0, 0, 1),
               ),
               Text('Nama              :',
                   style: TextStyle(
