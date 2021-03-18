@@ -14,7 +14,7 @@ class _AtasState extends State<Atas> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Color.fromRGBO(128, 0, 0, 1),
         title: Text(
           "FitApp",
           style: TextStyle(color: Colors.white, fontSize: 20),
@@ -48,50 +48,56 @@ class _AtasState extends State<Atas> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: Text(
-                                    'Detail',
-                                    style: TextStyle(fontSize: 30),
-                                  ),
-                                  content: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            color: Color.fromRGBO(128, 0, 0, 1),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(10))),
-                                        child: Text(
-                                          chest[i][j].detail,
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white),
-                                        ),
-                                        padding: EdgeInsets.all(20),
-                                      ),
-                                      Column(
-                                        children: [
-                                          Text(
-                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                    title: Text(
+                                      'Detail',
+                                      style: TextStyle(fontSize: 30),
+                                    ),
+                                    content: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              color:
+                                                  Color.fromRGBO(128, 0, 0, 1),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Text(
+                                            chest[i][j].detail,
                                             style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600),
-                                            textAlign: TextAlign.center,
+                                                fontSize: 15,
+                                                color: Colors.white),
                                           ),
-                                          InkWell(
-                                            child: Text(
-                                              chest[i][j].url,
-                                              style:
-                                                  TextStyle(color: Colors.blue),
+                                          padding: EdgeInsets.all(20),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text(
+                                              "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w600),
                                               textAlign: TextAlign.center,
                                             ),
-                                            onTap: () =>
-                                                launch(chest[i][j].url),
-                                          )
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  contentPadding: EdgeInsets.all(40),
-                                );
+                                            InkWell(
+                                              child: Text(
+                                                chest[i][j].url,
+                                                style: TextStyle(
+                                                    color: Colors.blue),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                              onTap: () =>
+                                                  launch(chest[i][j].url),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    contentPadding: EdgeInsets.all(40),
+                                    actions: [
+                                      FlatButton(
+                                        child: Text("Back"),
+                                        onPressed: () => Navigator.pop(context),
+                                      )
+                                    ]);
                               },
                             );
                           },
