@@ -11,7 +11,7 @@ class Upperbody {
       this.url});
 }
 
-final ringanchest = [
+final interchest = [
   [
     Upperbody(
         index: 1,
@@ -31,7 +31,8 @@ final ringanchest = [
         url: "https://youtu.be/kBREQ4OSds8"),
   ],
 ];
-final ringanarm = [
+
+final interarm = [
   [
     Upperbody(
         index: 1,
@@ -59,7 +60,8 @@ final ringanarm = [
         url: "https://youtu.be/kzohU7hbN9I"),
   ],
 ];
-final ringanabs = [
+
+final interabs = [
   [
     Upperbody(
         index: 3,
@@ -79,7 +81,8 @@ final ringanabs = [
         url: "https://youtu.be/dGKbTKLnym4"),
   ],
 ];
-final ringanback = [
+
+final interback = [
   [
     Upperbody(
         index: 2,
@@ -99,7 +102,7 @@ final ringanback = [
         url: "https://youtu.be/L-T0HejuQdo"),
   ],
 ];
-final lowerringan = [
+final lowerinter = [
   [
     Upperbody(
         index: 1,

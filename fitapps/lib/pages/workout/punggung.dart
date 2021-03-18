@@ -4,12 +4,12 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter/material.dart';
 
-class Atas extends StatefulWidget {
+class Punggung extends StatefulWidget {
   @override
-  _AtasState createState() => _AtasState();
+  _PunggungState createState() => _PunggungState();
 }
 
-class _AtasState extends State<Atas> {
+class _PunggungState extends State<Punggung> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

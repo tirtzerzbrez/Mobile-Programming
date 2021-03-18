@@ -26,17 +26,17 @@ class _SedangState extends State<Sedang> {
               vertical: 16,
             ),
             child: Column(children: [
-              for (int i = 0; i < ringanchest.length; i++)
+              for (int i = 0; i < interchest.length; i++)
                 Column(
                   children: [
-                    for (int j = 0; j < ringanchest[i].length; j++)
+                    for (int j = 0; j < interchest[i].length; j++)
                       ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                             child: Image.asset(
-                              ringanchest[i][j].gambar,
+                              interchest[i][j].gambar,
                               width: 50,
                               height: 50,
                             ),
@@ -60,7 +60,7 @@ class _SedangState extends State<Sedang> {
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
-                                            ringanchest[i][j].detail,
+                                            interchest[i][j].detail,
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Colors.white),
@@ -78,13 +78,13 @@ class _SedangState extends State<Sedang> {
                                             ),
                                             InkWell(
                                               child: Text(
-                                                ringanchest[i][j].url,
+                                                interchest[i][j].url,
                                                 style: TextStyle(
                                                     color: Colors.blue),
                                                 textAlign: TextAlign.center,
                                               ),
                                               onTap: () =>
-                                                  launch(ringanchest[i][j].url),
+                                                  launch(interchest[i][j].url),
                                             )
                                           ],
                                         ),
@@ -105,14 +105,14 @@ class _SedangState extends State<Sedang> {
                                   horizontal: 20, vertical: 30),
                               child: Column(children: [
                                 Text(
-                                  ringanchest[i][j].nama,
+                                  interchest[i][j].nama,
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                 ),
                                 Text(
-                                  ringanchest[i][j].instruksi,
+                                  interchest[i][j].instruksi,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 13),
                                 ),
@@ -121,17 +121,17 @@ class _SedangState extends State<Sedang> {
                           )),
                   ],
                 ),
-              for (int i = 0; i < ringanarm.length; i++)
+              for (int i = 0; i < interarm.length; i++)
                 Column(
                   children: [
-                    for (int j = 0; j < ringanarm[i].length; j++)
+                    for (int j = 0; j < interarm[i].length; j++)
                       ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                             child: Image.asset(
-                              ringanarm[i][j].gambar,
+                              interarm[i][j].gambar,
                               width: 50,
                               height: 50,
                             ),
@@ -155,7 +155,7 @@ class _SedangState extends State<Sedang> {
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
-                                            ringanarm[i][j].detail,
+                                            interarm[i][j].detail,
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Colors.white),
@@ -171,13 +171,13 @@ class _SedangState extends State<Sedang> {
                                         ),
                                         InkWell(
                                           child: Text(
-                                            ringanarm[i][j].url,
+                                            interarm[i][j].url,
                                             style:
                                                 TextStyle(color: Colors.blue),
                                             textAlign: TextAlign.center,
                                           ),
                                           onTap: () =>
-                                              launch(ringanarm[i][j].url),
+                                              launch(interarm[i][j].url),
                                         )
                                       ],
                                     ),
@@ -196,14 +196,14 @@ class _SedangState extends State<Sedang> {
                                   horizontal: 20, vertical: 30),
                               child: Column(children: [
                                 Text(
-                                  ringanarm[i][j].nama,
+                                  interarm[i][j].nama,
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                 ),
                                 Text(
-                                  ringanarm[i][j].instruksi,
+                                  interarm[i][j].instruksi,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 13),
                                 ),
@@ -212,17 +212,17 @@ class _SedangState extends State<Sedang> {
                           )),
                   ],
                 ),
-              for (int i = 0; i < ringanback.length; i++)
+              for (int i = 0; i < interback.length; i++)
                 Column(
                   children: [
-                    for (int j = 0; j < ringanback[i].length; j++)
+                    for (int j = 0; j < interback[i].length; j++)
                       ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                             child: Image.asset(
-                              ringanback[i][j].gambar,
+                              interback[i][j].gambar,
                               width: 50,
                               height: 50,
                             ),
@@ -246,7 +246,7 @@ class _SedangState extends State<Sedang> {
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
-                                            ringanback[i][j].detail,
+                                            interback[i][j].detail,
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Colors.white),
@@ -262,13 +262,13 @@ class _SedangState extends State<Sedang> {
                                         ),
                                         InkWell(
                                           child: Text(
-                                            ringanback[i][j].url,
+                                            interback[i][j].url,
                                             style:
                                                 TextStyle(color: Colors.blue),
                                             textAlign: TextAlign.center,
                                           ),
                                           onTap: () =>
-                                              launch(ringanback[i][j].url),
+                                              launch(interback[i][j].url),
                                         )
                                       ],
                                     ),
@@ -287,14 +287,14 @@ class _SedangState extends State<Sedang> {
                                   horizontal: 20, vertical: 30),
                               child: Column(children: [
                                 Text(
-                                  ringanback[i][j].nama,
+                                  interback[i][j].nama,
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                 ),
                                 Text(
-                                  ringanback[i][j].instruksi,
+                                  interback[i][j].instruksi,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 13),
                                 ),
@@ -303,17 +303,17 @@ class _SedangState extends State<Sedang> {
                           )),
                   ],
                 ),
-              for (int i = 0; i < lowerringan.length; i++)
+              for (int i = 0; i < lowerinter.length; i++)
                 Column(
                   children: [
-                    for (int j = 0; j < lowerringan[i].length; j++)
+                    for (int j = 0; j < lowerinter[i].length; j++)
                       ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                             child: Image.asset(
-                              lowerringan[i][j].gambar,
+                              lowerinter[i][j].gambar,
                               width: 50,
                               height: 50,
                             ),
@@ -337,7 +337,7 @@ class _SedangState extends State<Sedang> {
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
-                                            lowerringan[i][j].detail,
+                                            lowerinter[i][j].detail,
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Colors.white),
@@ -353,13 +353,13 @@ class _SedangState extends State<Sedang> {
                                         ),
                                         InkWell(
                                           child: Text(
-                                            lowerringan[i][j].url,
+                                            lowerinter[i][j].url,
                                             style:
                                                 TextStyle(color: Colors.blue),
                                             textAlign: TextAlign.center,
                                           ),
                                           onTap: () =>
-                                              launch(lowerringan[i][j].url),
+                                              launch(lowerinter[i][j].url),
                                         )
                                       ],
                                     ),
@@ -378,14 +378,14 @@ class _SedangState extends State<Sedang> {
                                   horizontal: 20, vertical: 30),
                               child: Column(children: [
                                 Text(
-                                  lowerringan[i][j].nama,
+                                  lowerinter[i][j].nama,
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                 ),
                                 Text(
-                                  lowerringan[i][j].instruksi,
+                                  lowerinter[i][j].instruksi,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 13),
                                 ),
@@ -394,17 +394,17 @@ class _SedangState extends State<Sedang> {
                           )),
                   ],
                 ),
-              for (int i = 0; i < ringanabs.length; i++)
+              for (int i = 0; i < interabs.length; i++)
                 Column(
                   children: [
-                    for (int j = 0; j < ringanabs[i].length; j++)
+                    for (int j = 0; j < interabs[i].length; j++)
                       ListTile(
                           leading: Container(
                             decoration: BoxDecoration(
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(20))),
                             child: Image.asset(
-                              ringanabs[i][j].gambar,
+                              interabs[i][j].gambar,
                               width: 50,
                               height: 50,
                             ),
@@ -428,7 +428,7 @@ class _SedangState extends State<Sedang> {
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
-                                            ringanabs[i][j].detail,
+                                            interabs[i][j].detail,
                                             style: TextStyle(
                                                 fontSize: 15,
                                                 color: Colors.white),
@@ -444,13 +444,13 @@ class _SedangState extends State<Sedang> {
                                         ),
                                         InkWell(
                                           child: Text(
-                                            ringanabs[i][j].url,
+                                            interabs[i][j].url,
                                             style:
                                                 TextStyle(color: Colors.blue),
                                             textAlign: TextAlign.center,
                                           ),
                                           onTap: () =>
-                                              launch(ringanabs[i][j].url),
+                                              launch(interabs[i][j].url),
                                         )
                                       ],
                                     ),
@@ -469,14 +469,14 @@ class _SedangState extends State<Sedang> {
                                   horizontal: 20, vertical: 30),
                               child: Column(children: [
                                 Text(
-                                  ringanabs[i][j].nama,
+                                  interabs[i][j].nama,
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.fromLTRB(0, 2, 0, 0),
                                 ),
                                 Text(
-                                  ringanabs[i][j].instruksi,
+                                  interabs[i][j].instruksi,
                                   style: TextStyle(
                                       color: Colors.white, fontSize: 13),
                                 ),
