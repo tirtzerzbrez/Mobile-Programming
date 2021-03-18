@@ -75,7 +75,9 @@ class _SinginState extends State<Singin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(),
+        appBar: AppBar(
+          backgroundColor: Color.fromRGBO(128, 0, 0, 1),
+        ),
         body: Container(
             constraints: BoxConstraints.expand(),
             decoration: BoxDecoration(
@@ -96,7 +98,7 @@ class _SinginState extends State<Singin> {
                         ),
                         Text("Sign In",
                             style: TextStyle(
-                                color: Colors.red,
+                                color: Color.fromRGBO(128, 0, 0, 1),
                                 fontSize: 55,
                                 fontWeight: FontWeight.bold)),
                       ],
@@ -138,7 +140,7 @@ class _SinginState extends State<Singin> {
                                         "Login",
                                         style: TextStyle(fontSize: 20),
                                       ),
-                                      color: Colors.red,
+                                      color: Color.fromRGBO(128, 0, 0, 1),
                                       textColor: Colors.white,
                                       padding: EdgeInsets.all(8.0),
                                       onPressed: () async {
@@ -171,7 +173,7 @@ class _SinginState extends State<Singin> {
                                       "Register New Account",
                                       style: TextStyle(fontSize: 20),
                                     ),
-                                    color: Colors.red,
+                                    color: Color.fromRGBO(128, 0, 0, 1),
                                     textColor: Colors.white,
                                     padding: EdgeInsets.all(8.0),
                                     onPressed: () {
@@ -181,14 +183,8 @@ class _SinginState extends State<Singin> {
                                               builder: (context) => Singup()));
                                     },
                                   )
-                                ]
-                            )
-                        )
-                    )
-                )
+                                ]))))
               ],
-            )
-        )
-    );
+            )));
   }
 }
