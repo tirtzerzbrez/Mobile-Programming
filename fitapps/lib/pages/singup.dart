@@ -149,7 +149,7 @@ class _SingupState extends State<Singup> {
                                               password: _password);
                                           print(_username);
                                           int hasil = await Databasepvdr.db
-                                              .insert(userdet);
+                                              .querycheck(_username);
                                           if (hasil == 1) {
                                             showDialog(
                                                 context: context,

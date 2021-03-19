@@ -73,6 +73,18 @@ class Databasepvdr {
     } else {
       return 0;
     }
+}
+
+  Future querycheck(String username) async {
+    final db = await database;
+    List datauser = await db.rawQuery(
+      'select username from usertbl where lower(username) like lower("$username")'
+    );
+    if(datauser.length != 0) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 
   Future queryid(String username) async {
