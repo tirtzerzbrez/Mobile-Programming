@@ -32,6 +32,7 @@ class _frontscreenState extends State<frontscreen> {
                 fontSize: 18,
               ),
             ),
+            accountEmail: Text(' '),
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                 child: Image.asset('assets/image/profile.png'),
