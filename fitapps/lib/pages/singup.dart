@@ -151,8 +151,6 @@ class _SingupState extends State<Singup> {
                                           int hasil = await Databasepvdr.db
                                               .insert(userdet);
                                           if (hasil == 1) {
-                                            return;
-                                          } else {
                                             showDialog(
                                                 context: context,
                                                 builder:
@@ -165,13 +163,14 @@ class _SingupState extends State<Singup> {
                                                       new FlatButton(
                                                         child: Text("OK"),
                                                         onPressed: () {
-                                                          Navigator.pop(
-                                                              context);
+                                                          return;
                                                         },
                                                       )
                                                     ],
                                                   );
                                                 });
+                                          } else {
+                                            Navigator.pop(context);
                                           }
                                         }
                                       },

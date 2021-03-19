@@ -151,7 +151,8 @@ class _SinginState extends State<Singin> {
                                           String password = _password;
                                           int hsl = await Databasepvdr.db
                                               .query(username, password);
-                                          if (hsl == 1) {
+                                          if (hsl != 0) {
+                                            print(hsl);
                                             Navigator.pushAndRemoveUntil(
                                                 context,
                                                 MaterialPageRoute(
