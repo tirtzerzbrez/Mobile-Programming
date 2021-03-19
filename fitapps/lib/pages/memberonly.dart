@@ -24,23 +24,15 @@ class _MemberOnlyState extends State<MemberOnly> {
   var _tinggi = 0;
   var _berat = 0;
   double bmi = 0;
-  List<Map> id;
   var nama;
 
   List<Fulldatamdl> fullDetail;
-  getid() async {
-    if (fullDetail == null) {
-      fullDetail = new List<Fulldatamdl>();
-    }
-    id = await Databasepvdr.db.queryid(widget.query);
-    print(id);
-  }
 
   @override
   void initState() {
     super.initState();
-    getid();
-    print(id);
+    fullDetail:
+    Databasepvdr.db.getdetail(widget.query);
   }
 
   final GlobalKey<FormState> _formkey = GlobalKey<FormState>();
