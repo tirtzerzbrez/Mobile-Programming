@@ -157,9 +157,7 @@ class _SinginState extends State<Singin> {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        MemberOnly(
-                                                          query: username,
-                                                        )),
+                                                        MemberOnly()),
                                                 (route) => false);
                                           } else {
                                             showDialog(
