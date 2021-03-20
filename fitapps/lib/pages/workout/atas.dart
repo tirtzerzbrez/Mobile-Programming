@@ -2,13 +2,21 @@ import 'package:fitapps/resource/gerakan/Upper.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
-
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 class Atas extends StatefulWidget {
   @override
   _AtasState createState() => _AtasState();
 }
 
 class _AtasState extends State<Atas> {
+  YoutubePlayerController _controller = YoutubePlayerController(
+      initialVideoId: ' ',
+    flags: YoutubePlayerFlags(
+      autoPlay: false,
+      mute: false,
+    )
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,6 +94,13 @@ class _AtasState extends State<Atas> {
                                               onTap: () =>
                                                   launch(chest[i][j].url),
                                             ),
+                                            YoutubePlayer(
+                                              controller: YoutubePlayerController(
+                                                  initialVideoId: YoutubePlayer.convertUrlToId(chest[i][j].url),
+                                              ),
+                                              showVideoProgressIndicator: true,
+                                              progressIndicatorColor: Colors.blueAccent,
+                                            )
                                           ],
                                         ),
                                       ],
