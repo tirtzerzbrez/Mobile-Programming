@@ -26,7 +26,7 @@ class _frontscreenState extends State<frontscreen> {
         children: <Widget>[
           UserAccountsDrawerHeader(
             accountName: Text(
-                'Guest',
+              'Guest',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,
@@ -39,11 +39,10 @@ class _frontscreenState extends State<frontscreen> {
               ),
             ),
             decoration: new BoxDecoration(
-              image: new  DecorationImage(
-                image: new AssetImage('assets/image/sidebardugdug.jpg'),
-                fit: BoxFit.cover,
-              )
-            ),
+                image: new DecorationImage(
+              image: new AssetImage('assets/image/sidebardugdug.jpg'),
+              fit: BoxFit.cover,
+            )),
           ),
           ListTile(
             title: Text('Covid-19', style: TextStyle(fontSize: 18)),
