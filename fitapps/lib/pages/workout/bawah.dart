@@ -1,7 +1,7 @@
 import 'package:fitapps/resource/gerakan/Lower.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
 
 class Bawah extends StatefulWidget {
@@ -86,6 +86,16 @@ class _BawahState extends State<Bawah> {
                                             onTap: () =>
                                                 launch(lower[i][j].url),
                                           ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      lower[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
+                                          )
                                         ],
                                       ),
                                     ],

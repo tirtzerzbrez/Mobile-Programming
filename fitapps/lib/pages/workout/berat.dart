@@ -1,7 +1,8 @@
+import 'package:fitapps/resource/gerakan/ORadvance.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:fitapps/resource/gerakan/ORAdvance.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Berat extends StatefulWidget {
   @override
@@ -87,6 +88,18 @@ class _BeratState extends State<Berat> {
                                                 onTap: () => launch(
                                                     beratchest[i][j].url),
                                               ),
+                                              YoutubePlayer(
+                                                controller:
+                                                    YoutubePlayerController(
+                                                  initialVideoId: YoutubePlayer
+                                                      .convertUrlToId(
+                                                          beratchest[i][j].url),
+                                                ),
+                                                showVideoProgressIndicator:
+                                                    true,
+                                                progressIndicatorColor:
+                                                    Colors.blueAccent,
+                                              )
                                             ],
                                           ),
                                         ],
@@ -185,6 +198,16 @@ class _BeratState extends State<Berat> {
                                             ),
                                             onTap: () =>
                                                 launch(beratarm[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      beratchest[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -282,6 +305,16 @@ class _BeratState extends State<Berat> {
                                             ),
                                             onTap: () =>
                                                 launch(beratback[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      beratchest[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -379,6 +412,16 @@ class _BeratState extends State<Berat> {
                                             ),
                                             onTap: () =>
                                                 launch(lowerberat[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      beratchest[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -476,6 +519,16 @@ class _BeratState extends State<Berat> {
                                             ),
                                             onTap: () =>
                                                 launch(beratabs[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      beratabs[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),

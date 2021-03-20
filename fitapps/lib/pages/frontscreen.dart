@@ -43,7 +43,6 @@ class _frontscreenState extends State<frontscreen> {
               image: new AssetImage('assets/image/sidebardugdug.jpg'),
               fit: BoxFit.cover,
             )),
-            accountEmail: null,
           ),
           ListTile(
             title: Text('Covid-19', style: TextStyle(fontSize: 18)),

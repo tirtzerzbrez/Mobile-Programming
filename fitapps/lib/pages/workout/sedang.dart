@@ -2,6 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:fitapps/resource/gerakan/ORsedang.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Sedang extends StatefulWidget {
   @override
@@ -86,6 +87,18 @@ class _SedangState extends State<Sedang> {
                                                 ),
                                                 onTap: () => launch(
                                                     interchest[i][j].url),
+                                              ),
+                                              YoutubePlayer(
+                                                controller:
+                                                    YoutubePlayerController(
+                                                  initialVideoId: YoutubePlayer
+                                                      .convertUrlToId(
+                                                          interchest[i][j].url),
+                                                ),
+                                                showVideoProgressIndicator:
+                                                    true,
+                                                progressIndicatorColor:
+                                                    Colors.blueAccent,
                                               )
                                             ],
                                           ),
@@ -185,6 +198,16 @@ class _SedangState extends State<Sedang> {
                                             ),
                                             onTap: () =>
                                                 launch(interarm[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      interarm[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -282,6 +305,16 @@ class _SedangState extends State<Sedang> {
                                             ),
                                             onTap: () =>
                                                 launch(interback[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      interback[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -379,6 +412,16 @@ class _SedangState extends State<Sedang> {
                                             ),
                                             onTap: () =>
                                                 launch(lowerinter[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      lowerinter[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),
@@ -476,6 +519,16 @@ class _SedangState extends State<Sedang> {
                                             ),
                                             onTap: () =>
                                                 launch(interabs[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      interabs[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
                                           )
                                         ],
                                       ),

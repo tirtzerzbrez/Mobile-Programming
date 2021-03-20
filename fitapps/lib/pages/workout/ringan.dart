@@ -2,6 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:fitapps/resource/gerakan/ORringan.dart';
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class Workout extends StatefulWidget {
   @override
@@ -47,57 +48,71 @@ class _WorkoutState extends State<Workout> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            ringanchest[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
-                                          ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Column(
-                                          children: [
-                                            Text(
-                                              "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              ringanchest[i][j].detail,
                                               style: TextStyle(
-                                                  fontSize: 20,
-                                                  fontWeight: FontWeight.w600),
-                                              textAlign: TextAlign.center,
+                                                  fontSize: 15,
+                                                  color: Colors.white),
                                             ),
-                                            InkWell(
-                                              child: Text(
-                                                ringanchest[i][j].url,
+                                            padding: EdgeInsets.all(20),
+                                          ),
+                                          Column(
+                                            children: [
+                                              Text(
+                                                "\n  Masih bingung ? \n Klik link dibawah ini ",
                                                 style: TextStyle(
-                                                    color: Colors.blue),
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w600),
                                                 textAlign: TextAlign.center,
                                               ),
-                                              onTap: () =>
-                                                  launch(ringanchest[i][j].url),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                     actions: [
-                                    FlatButton(
-                                      child: Text("Back"),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                   ]
-                                  );
+                                              InkWell(
+                                                child: Text(
+                                                  ringanchest[i][j].url,
+                                                  style: TextStyle(
+                                                      color: Colors.blue),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                                onTap: () => launch(
+                                                    ringanchest[i][j].url),
+                                              ),
+                                              YoutubePlayer(
+                                                controller:
+                                                    YoutubePlayerController(
+                                                  initialVideoId: YoutubePlayer
+                                                      .convertUrlToId(
+                                                          ringanchest[i][j]
+                                                              .url),
+                                                ),
+                                                showVideoProgressIndicator:
+                                                    true,
+                                                progressIndicatorColor:
+                                                    Colors.blueAccent,
+                                              )
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
+                                        )
+                                      ]);
                                 },
                               );
                             },
@@ -148,53 +163,63 @@ class _WorkoutState extends State<Workout> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            ringanarm[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              ringanarm[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            ringanarm[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(ringanarm[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              ringanarm[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(ringanarm[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      ringanarm[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                     actions: [
-                                    FlatButton(
-                                      child: Text("Back"),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                   ]
-                                  );
+                                      ]);
                                 },
                               );
                             },
@@ -281,6 +306,16 @@ class _WorkoutState extends State<Workout> {
                                           ),
                                           onTap: () =>
                                               launch(ringanback[i][j].url),
+                                        ),
+                                        YoutubePlayer(
+                                          controller: YoutubePlayerController(
+                                            initialVideoId:
+                                                YoutubePlayer.convertUrlToId(
+                                                    ringanarm[i][j].url),
+                                          ),
+                                          showVideoProgressIndicator: true,
+                                          progressIndicatorColor:
+                                              Colors.blueAccent,
                                         )
                                       ],
                                     ),
@@ -336,53 +371,63 @@ class _WorkoutState extends State<Workout> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            lowerringan[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              lowerringan[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            lowerringan[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(lowerringan[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              lowerringan[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(lowerringan[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      ringanarm[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                     actions: [
-                                    FlatButton(
-                                      child: Text("Back"),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                   ]
-                                  );
+                                      ]);
                                 },
                               );
                             },
@@ -433,53 +478,63 @@ class _WorkoutState extends State<Workout> {
                                 context: context,
                                 builder: (BuildContext context) {
                                   return AlertDialog(
-                                    title: Text(
-                                      'Detail',
-                                      style: TextStyle(fontSize: 30),
-                                    ),
-                                    content: Column(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                              color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(10))),
-                                          child: Text(
-                                            ringanabs[i][j].detail,
-                                            style: TextStyle(
-                                                fontSize: 15,
-                                                color: Colors.white),
+                                      title: Text(
+                                        'Detail',
+                                        style: TextStyle(fontSize: 30),
+                                      ),
+                                      content: Column(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                                color: Color.fromRGBO(
+                                                    128, 0, 0, 1),
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(10))),
+                                            child: Text(
+                                              ringanabs[i][j].detail,
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Colors.white),
+                                            ),
+                                            padding: EdgeInsets.all(20),
                                           ),
-                                          padding: EdgeInsets.all(20),
-                                        ),
-                                        Text(
-                                          "\n  Masih bingung ? \n Klik link dibawah ini ",
-                                          style: TextStyle(
-                                              fontSize: 20,
-                                              fontWeight: FontWeight.w600),
-                                          textAlign: TextAlign.center,
-                                        ),
-                                        InkWell(
-                                          child: Text(
-                                            ringanabs[i][j].url,
-                                            style:
-                                                TextStyle(color: Colors.blue),
+                                          Text(
+                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                fontWeight: FontWeight.w600),
                                             textAlign: TextAlign.center,
                                           ),
-                                          onTap: () =>
-                                              launch(ringanabs[i][j].url),
+                                          InkWell(
+                                            child: Text(
+                                              ringanabs[i][j].url,
+                                              style:
+                                                  TextStyle(color: Colors.blue),
+                                              textAlign: TextAlign.center,
+                                            ),
+                                            onTap: () =>
+                                                launch(ringanabs[i][j].url),
+                                          ),
+                                          YoutubePlayer(
+                                            controller: YoutubePlayerController(
+                                              initialVideoId:
+                                                  YoutubePlayer.convertUrlToId(
+                                                      ringanarm[i][j].url),
+                                            ),
+                                            showVideoProgressIndicator: true,
+                                            progressIndicatorColor:
+                                                Colors.blueAccent,
+                                          )
+                                        ],
+                                      ),
+                                      contentPadding: EdgeInsets.all(40),
+                                      actions: [
+                                        FlatButton(
+                                          child: Text("Back"),
+                                          onPressed: () =>
+                                              Navigator.pop(context),
                                         )
-                                      ],
-                                    ),
-                                    contentPadding: EdgeInsets.all(40),
-                                     actions: [
-                                    FlatButton(
-                                      child: Text("Back"),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                   ]
-                                  );
+                                      ]);
                                 },
                               );
                             },
