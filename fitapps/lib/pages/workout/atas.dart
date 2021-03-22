@@ -35,7 +35,7 @@ class _AtasState extends State<Atas> {
                         leading: Container(
                           decoration: BoxDecoration(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(20))),
+                              BorderRadius.all(Radius.circular(20))),
                           child: Image.asset(
                             chest[i][j].gambar,
                             width: 50,
@@ -57,7 +57,7 @@ class _AtasState extends State<Atas> {
                                         Container(
                                           decoration: BoxDecoration(
                                               color:
-                                                  Color.fromRGBO(128, 0, 0, 1),
+                                              Color.fromRGBO(128, 0, 0, 1),
                                               borderRadius: BorderRadius.all(
                                                   Radius.circular(10))),
                                           child: Text(
@@ -115,7 +115,7 @@ class _AtasState extends State<Atas> {
                           child: Container(
                             decoration: BoxDecoration(
                               borderRadius:
-                                  BorderRadius.all(Radius.circular(10)),
+                              BorderRadius.all(Radius.circular(10)),
                               color: Color.fromRGBO(128, 0, 0, 1),
                             ),
                             padding: EdgeInsets.symmetric(

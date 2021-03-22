@@ -170,6 +170,7 @@ class _SingupState extends State<Singup> {
                                                   );
                                                 });
                                           } else {
+                                            Databasepvdr.db.insert(userdet);
                                             Navigator.pop(context);
                                           }
                                         }

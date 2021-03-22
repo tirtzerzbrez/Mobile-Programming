@@ -1,4 +1,5 @@
 import 'package:fitapps/db/databasemdl.dart';
+import 'package:fitapps/db/fulldatamdl.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
@@ -10,6 +11,7 @@ class Databasepvdr {
   static const String COLUMN_WEIGHT = "weight";
   static const String COLUMN_HEIGHT = "height";
   static const String COLUMN_BMI = "bmi";
+  static const String COLUMN_CATEGORY = "kategori";
 
   Databasepvdr._();
   static final Databasepvdr db = Databasepvdr._();
@@ -41,7 +43,8 @@ class Databasepvdr {
           "$COLUMN_PASSWORD TEXT,"
           "$COLUMN_HEIGHT INTEGER,"
           "$COLUMN_WEIGHT INTEGER,"
-          "$COLUMN_BMI REAL"
+          "$COLUMN_BMI REAL,"
+          "$COLUMN_CATEGORY TEXT"
           ")");
     });
   }
@@ -51,14 +54,6 @@ class Databasepvdr {
     databasemdl.id = await db.insert(TABLE_USER, databasemdl.toMap());
     List datauser = await db.rawQuery(
         'SELECT username FROM usertbl WHERE id LIKE "${databasemdl.id}"');
-    List checker = await db
-        .rawQuery('SELECT id FROM usertbl WHERE username LIKE "${datauser}"');
-    if (checker.length != 0) {
-      await db.rawDelete('DELETE FROM usertbl WHERE id = "$databasemdl.id"');
-      return 1;
-    } else {
-      return 0;
-    }
   }
 
   Future query(String username, String password) async {
@@ -95,5 +90,21 @@ class Databasepvdr {
     List res = datauser;
     print(res);
     return datauser;
+  }
+
+  Future querymember(String username) async {
+    final db = await database;
+    print(username);
+    List datauser = await db.rawQuery(
+        'SELECT id,username,height,weight,bmi,kategori FROM usertbl WHERE LOWER(username) LIKE LOWER("$username")');
+    List res = datauser;
+    return datauser;
+  }
+
+  Future update(int tinggi,int berat, double BMI, String ktgr, String username) async {
+    final db = await database;
+    int res = await db.rawUpdate(
+        'UPDATE usertbl SET weight = $berat, height = $tinggi, kategori = $ktgr, bmi = $BMI WHERE username LIKE LOWER("$username")');
+    print(res);
   }
 }
