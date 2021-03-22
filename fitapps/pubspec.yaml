@@ -29,6 +29,7 @@ dependencies:
   sqflite: ^1.2.0
   path: ^1.6.4
   url_launcher:
+
   youtube_player_flutter: ^6.1.0+7
   ant_icons: ^1.0.0
   flutter_icons: ^1.1.0

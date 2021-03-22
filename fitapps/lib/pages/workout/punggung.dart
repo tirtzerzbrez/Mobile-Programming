@@ -1,7 +1,8 @@
 import 'package:fitapps/resource/gerakan/Back.dart';
+import 'package:fitapps/resource/gerakan/Lower.dart';
 import 'package:flutter/rendering.dart';
 import 'package:url_launcher/url_launcher.dart';
-
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 import 'package:flutter/material.dart';
 
 class Punggung extends StatefulWidget {
@@ -48,56 +49,67 @@ class _PunggungState extends State<Punggung> {
                               context: context,
                               builder: (BuildContext context) {
                                 return AlertDialog(
-                                  title: Text(
-                                    'Detail',
-                                    style: TextStyle(fontSize: 30),
-                                  ),
-                                  content: Column(
-                                    children: [
-                                      Container(
-                                        decoration: BoxDecoration(
-                                            color: Color.fromRGBO(128, 0, 0, 1),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(10))),
-                                        child: Text(
-                                          back[i][j].detail,
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              color: Colors.white),
-                                        ),
-                                        padding: EdgeInsets.all(20),
-                                      ),
-                                      Column(
-                                        children: [
-                                          Text(
-                                            "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                    title: Text(
+                                      'Detail',
+                                      style: TextStyle(fontSize: 30),
+                                    ),
+                                    content: Column(
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                              color:
+                                                  Color.fromRGBO(128, 0, 0, 1),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(10))),
+                                          child: Text(
+                                            back[i][j].detail,
                                             style: TextStyle(
-                                                fontSize: 20,
-                                                fontWeight: FontWeight.w600),
-                                            textAlign: TextAlign.center,
+                                                fontSize: 15,
+                                                color: Colors.white),
                                           ),
-                                          InkWell(
-                                            child: Text(
-                                              back[i][j].url,
-                                              style:
-                                                  TextStyle(color: Colors.blue),
+                                          padding: EdgeInsets.all(20),
+                                        ),
+                                        Column(
+                                          children: [
+                                            Text(
+                                              "\n  Masih bingung ? \n Klik link dibawah ini ",
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w600),
                                               textAlign: TextAlign.center,
                                             ),
-                                            onTap: () => launch(back[i][j].url),
-                                          ),
-                                         
-                                        ],
-                                      ),
-                                    ],
-                                  ),
-                                  contentPadding: EdgeInsets.all(40),
-                                   actions: [
-                                    FlatButton(
-                                      child: Text("Back"),
-                                      onPressed: () => Navigator.pop(context),
-                                    )
-                                   ]
-                                );
+                                            InkWell(
+                                              child: Text(
+                                                back[i][j].url,
+                                                style: TextStyle(
+                                                    color: Colors.blue),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                              onTap: () =>
+                                                  launch(back[i][j].url),
+                                            ),
+                                            YoutubePlayer(
+                                              controller:
+                                                  YoutubePlayerController(
+                                                initialVideoId: YoutubePlayer
+                                                    .convertUrlToId(
+                                                        back[i][j].url),
+                                              ),
+                                              showVideoProgressIndicator: true,
+                                              progressIndicatorColor:
+                                                  Colors.blueAccent,
+                                            )
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    contentPadding: EdgeInsets.all(40),
+                                    actions: [
+                                      FlatButton(
+                                        child: Text("Back"),
+                                        onPressed: () => Navigator.pop(context),
+                                      )
+                                    ]);
                               },
                             );
                           },
