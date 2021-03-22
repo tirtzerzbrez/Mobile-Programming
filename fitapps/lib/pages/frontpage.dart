@@ -1,20 +1,23 @@
 import 'package:fitapps/pages/CovidNews.dart';
 import 'package:fitapps/pages/covid19.dart';
-import 'package:fitapps/pages/memberonly.dart';
 import 'package:fitapps/pages/singin.dart';
 import 'package:flutter/material.dart';
 import 'workout/atas.dart';
 import 'workout/bawah.dart';
-import 'workout/punggung.dart';
 
 // ignore: camel_case_types
-class frontscreen extends StatefulWidget {
+class frontpage extends StatefulWidget {
+  final List query;
+  frontpage({Key key, @required this.query}) : super(key: key);
+
   @override
-  _frontscreenState createState() => _frontscreenState();
+  _frontpageState createState() => _frontpageState(query);
 }
 
 // ignore: camel_case_types
-class _frontscreenState extends State<frontscreen> {
+class _frontpageState extends State<frontpage> {
+  List query;
+  _frontpageState(this.query);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,54 +27,51 @@ class _frontscreenState extends State<frontscreen> {
       ),
       endDrawer: Drawer(
           child: ListView(
-        padding: EdgeInsets.zero,
-        children: <Widget>[
-          UserAccountsDrawerHeader(
-            accountName: Text(
-                'Guest',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                accountName: Text(
+                  query[1],
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                  ),
+                ),
+                accountEmail: Text(' '),
+                decoration: new BoxDecoration(
+                    image: new  DecorationImage(
+                      image: new AssetImage('assets/image/sidebardugdug.jpg'),
+                      fit: BoxFit.cover,
+                    )
+                ),
               ),
-            ),
-            accountEmail: Text(' '),
-            decoration: new BoxDecoration(
-              image: new  DecorationImage(
-                image: new AssetImage('assets/image/sidebardugdug.jpg'),
-                fit: BoxFit.cover,
-              )
-            ),
-          ),
-          ListTile(
-            title: Text('Covid-19', style: TextStyle(fontSize: 18)),
-            leading: Icon(Icons.new_releases, color: Colors.red),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => berita()),
-              );
-            },
-          ),
-          Divider(),
-          ListTile(
-            title: Text('Signin'),
-            leading: Icon(Icons.vpn_key_outlined),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Singin()),
-              );
-            },
-          ),
-          ListTile(
-            title: Text('Tentang Developer'),
-            leading: Icon(Icons.info_outline),
-            onTap: () {
-              Navigator.pop(context);
-            },
-          ),
-        ],
-      )),
+              ListTile(
+                title: Text('Covid-19', style: TextStyle(fontSize: 18)),
+                leading: Icon(Icons.new_releases, color: Colors.red),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => berita()),
+                  );
+                },
+              ),
+              Divider(),
+              ListTile(
+                title: Text('Profile'),
+                leading: Icon(Icons.vpn_key_outlined),
+                onTap: () {
+                  Navigator.of(context).popUntil((route) => route.isFirst);
+                },
+              ),
+              ListTile(
+                title: Text('Tentang Developer'),
+                leading: Icon(Icons.info_outline),
+                onTap: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          )),
       body: SingleChildScrollView(
         child: Container(
           child: Column(children: <Widget>[
@@ -79,9 +79,8 @@ class _frontscreenState extends State<frontscreen> {
               height: 2,
             ),
             makeList1(image: 'assets/image/virus.png', tag: 'red'),
-            makeList2(image: 'assets/image/upper.png', tag: 'blue'),
-            makeList3(image: 'assets/image/lower.png', tag: 'cyan'),
-            makeList4(image: 'assets/image/back.png', tag: 'orange'),
+            makeList2(image: 'assets/image/olahraga.jpg', tag: 'blue'),
+            makeList3(image: 'assets/image/sayuur.jpg', tag: 'cyan'),
           ]),
         ),
       ),
@@ -174,7 +173,7 @@ class _frontscreenState extends State<frontscreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Upper Body",
+                              "Olahraga",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -226,59 +225,7 @@ class _frontscreenState extends State<frontscreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Text(
-                              "Lower Body",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold),
-                            )
-                          ]),
-                    )
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget makeList4({image, tag}) {
-    return Hero(
-      tag: tag,
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Punggung()),
-          );
-        },
-        child: Center(
-          child: Container(
-            height: 105,
-            width: 370,
-            padding: EdgeInsets.only(top: 15, left: 20),
-            margin: EdgeInsets.only(bottom: 20),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
-              image: DecorationImage(
-                image: AssetImage(image),
-                fit: BoxFit.fitWidth,
-              ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Back",
+                              "Makanan",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,

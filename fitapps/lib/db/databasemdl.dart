@@ -4,6 +4,7 @@ class Databasemdl {
   int id;
   String username;
   String password;
+  String kategori;
   int height;
   int weight;
   double bmi;

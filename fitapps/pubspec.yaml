@@ -30,6 +30,8 @@ dependencies:
   path: ^1.6.4
   url_launcher:
   youtube_player_flutter: ^6.1.0+7
+  ant_icons: ^1.0.0
+  flutter_icons: ^1.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -53,6 +55,10 @@ flutter:
   assets:
     - assets/image/
     - assets/icons/
+  fonts:
+    - family: Nise
+      fonts:
+        - asset: assets/fonts/Nise-Medium.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -72,8 +78,6 @@ flutter:
   # example:
   # fonts:
   #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
