@@ -11,18 +11,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1ba9ef4-fd26-4ef8-808f-39811cb4ac06" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontpage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/db/databasemdl.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/db/databasemdl.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/db/databasepvdr.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/db/databasepvdr.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontpage.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontscreen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/singin.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/singin.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/singup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/singup.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/workout/atas.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/workout/atas.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,31 +96,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1128" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615903203210" />
-    <state x="163" y="196" width="1200" height="842" key="AVDManager" timestamp="1616393533930">
+    <state x="163" y="196" width="1200" height="842" key="AVDManager" timestamp="1616567430576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="163" y="196" width="1200" height="842" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1616393533930" />
+    <state x="163" y="196" width="1200" height="842" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1616567430576" />
     <state x="658" y="196" key="FileChooserDialogImpl" timestamp="1616221734579">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="468" y="145" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615869440703" />
     <state x="658" y="196" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616221734579" />
-    <state width="1407" height="232" key="GridCell.Tab.0.bottom" timestamp="1616397653378">
+    <state width="1407" height="234" key="GridCell.Tab.0.bottom" timestamp="1616491383174">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="232" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616397653378" />
-    <state width="1407" height="232" key="GridCell.Tab.0.center" timestamp="1616397653378">
+    <state width="1407" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616491383174" />
+    <state width="1407" height="234" key="GridCell.Tab.0.center" timestamp="1616491383173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="232" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616397653378" />
-    <state width="1407" height="232" key="GridCell.Tab.0.left" timestamp="1616397653378">
+    <state width="1407" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616491383173" />
+    <state width="1407" height="234" key="GridCell.Tab.0.left" timestamp="1616491383173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="232" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616397653378" />
-    <state width="1407" height="232" key="GridCell.Tab.0.right" timestamp="1616397653378">
+    <state width="1407" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616491383173" />
+    <state width="1407" height="234" key="GridCell.Tab.0.right" timestamp="1616491383173">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="232" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616397653378" />
+    <state width="1407" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616491383173" />
     <state x="266" y="47" key="SettingsEditor" timestamp="1615871427324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

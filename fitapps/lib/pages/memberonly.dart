@@ -271,9 +271,19 @@ class _MemberState extends State<Member> {
                                       frontpage(query: dataaja)));
                         },
                       ),
-                      Icon(
-                        AntDesign.logout,
-                        color: Colors.white,
+                      InkWell(
+                        child: Icon(
+                          AntDesign.logout,
+                          color: Colors.white,
+                        ),
+                        onTap: () {
+                          Navigator.pushAndRemoveUntil(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      frontscreen()),
+                                  (route) => false);
+                        },
                       ),
                     ],
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

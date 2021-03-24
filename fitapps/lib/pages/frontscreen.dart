@@ -31,7 +31,7 @@ class _frontscreenState extends State<frontscreen> {
               'Guest',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 18,
+                fontSize: 24,
               ),
             ),
             accountEmail: Text(' '),

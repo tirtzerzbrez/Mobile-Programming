@@ -1,6 +1,11 @@
 import 'package:fitapps/pages/CovidNews.dart';
+import 'package:fitapps/pages/Food/makansiang.dart';
+import 'package:fitapps/pages/Food/psm.dart';
 import 'package:fitapps/pages/covid19.dart';
 import 'package:fitapps/pages/singin.dart';
+import 'package:fitapps/pages/workout/berat.dart';
+import 'package:fitapps/pages/workout/ringan.dart';
+import 'package:fitapps/pages/workout/sedang.dart';
 import 'package:flutter/material.dart';
 import 'workout/atas.dart';
 import 'workout/bawah.dart';
@@ -34,7 +39,7 @@ class _frontpageState extends State<frontpage> {
                   query[1],
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 24,
                   ),
                 ),
                 accountEmail: Text(' '),
@@ -58,7 +63,7 @@ class _frontpageState extends State<frontpage> {
               Divider(),
               ListTile(
                 title: Text('Profile'),
-                leading: Icon(Icons.vpn_key_outlined),
+                leading: Icon(Icons.account_circle_rounded),
                 onTap: () {
                   Navigator.of(context).popUntil((route) => route.isFirst);
                 },
@@ -144,10 +149,30 @@ class _frontpageState extends State<frontpage> {
       tag: tag,
       child: GestureDetector(
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => Atas()),
-          );
+          if(query[0] < 19){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Berat()),
+            );
+          }
+          else if(query[0] < 30 && query[0] > 19){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Berat()),
+            );
+          }
+          else if(query[0] < 30 && query[0] > 25){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Sedang()),
+            );
+          }
+          else{
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Workout()),
+            );
+          }
         },
         child: Center(
           child: Container(
@@ -198,7 +223,7 @@ class _frontpageState extends State<frontpage> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => Bawah()),
+            MaterialPageRoute(builder: (context) => PSM()),
           );
         },
         child: Center(
