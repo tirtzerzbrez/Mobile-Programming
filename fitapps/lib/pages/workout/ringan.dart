@@ -90,16 +90,14 @@ class _WorkoutState extends State<Workout> {
                                               ),
                                               YoutubePlayer(
                                                 controller:
-                                                    YoutubePlayerController(
+                                                YoutubePlayerController(
                                                   initialVideoId: YoutubePlayer
                                                       .convertUrlToId(
-                                                          ringanchest[i][j]
-                                                              .url),
+                                                      ringanchest[i][j].url),
                                                 ),
-                                                showVideoProgressIndicator:
-                                                    true,
+                                                showVideoProgressIndicator: true,
                                                 progressIndicatorColor:
-                                                    Colors.blueAccent,
+                                                Colors.blueAccent,
                                               )
                                             ],
                                           ),
@@ -311,7 +309,7 @@ class _WorkoutState extends State<Workout> {
                                           controller: YoutubePlayerController(
                                             initialVideoId:
                                                 YoutubePlayer.convertUrlToId(
-                                                    ringanarm[i][j].url),
+                                                    ringanback[i][j].url),
                                           ),
                                           showVideoProgressIndicator: true,
                                           progressIndicatorColor:
@@ -412,7 +410,7 @@ class _WorkoutState extends State<Workout> {
                                             controller: YoutubePlayerController(
                                               initialVideoId:
                                                   YoutubePlayer.convertUrlToId(
-                                                      ringanarm[i][j].url),
+                                                      lowerringan[i][j].url),
                                             ),
                                             showVideoProgressIndicator: true,
                                             progressIndicatorColor:
@@ -519,7 +517,7 @@ class _WorkoutState extends State<Workout> {
                                             controller: YoutubePlayerController(
                                               initialVideoId:
                                                   YoutubePlayer.convertUrlToId(
-                                                      ringanarm[i][j].url),
+                                                      ringanabs[i][j].url),
                                             ),
                                             showVideoProgressIndicator: true,
                                             progressIndicatorColor:

@@ -67,7 +67,7 @@ class _PunggungState extends State<Punggung> {
                                                 fontSize: 15,
                                                 color: Colors.white),
                                           ),
-                                          padding: EdgeInsets.all(20),
+                                          padding: EdgeInsets.only(bottom: 20, left: 20, right: 20, top: 2),
                                         ),
                                         Column(
                                           children: [

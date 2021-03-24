@@ -149,19 +149,19 @@ class _frontpageState extends State<frontpage> {
       tag: tag,
       child: GestureDetector(
         onTap: () {
-          if(query[0] < 19){
+          if(query[0] <= 19){
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Berat()),
             );
           }
-          else if(query[0] < 30 && query[0] > 19){
+          else if(query[0] <= 25 && query[0] > 19){
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Berat()),
             );
           }
-          else if(query[0] < 30 && query[0] > 25){
+          else if(query[0] <= 30 && query[0] > 25){
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => Sedang()),
