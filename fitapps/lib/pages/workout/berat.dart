@@ -203,7 +203,7 @@ class _BeratState extends State<Berat> {
                                             controller: YoutubePlayerController(
                                               initialVideoId:
                                                   YoutubePlayer.convertUrlToId(
-                                                      beratchest[i][j].url),
+                                                      beratarm[i][j].url),
                                             ),
                                             showVideoProgressIndicator: true,
                                             progressIndicatorColor:
@@ -310,7 +310,7 @@ class _BeratState extends State<Berat> {
                                             controller: YoutubePlayerController(
                                               initialVideoId:
                                                   YoutubePlayer.convertUrlToId(
-                                                      beratchest[i][j].url),
+                                                      beratback[i][j].url),
                                             ),
                                             showVideoProgressIndicator: true,
                                             progressIndicatorColor:
@@ -417,7 +417,7 @@ class _BeratState extends State<Berat> {
                                             controller: YoutubePlayerController(
                                               initialVideoId:
                                                   YoutubePlayer.convertUrlToId(
-                                                      beratchest[i][j].url),
+                                                      lowerberat[i][j].url),
                                             ),
                                             showVideoProgressIndicator: true,
                                             progressIndicatorColor:

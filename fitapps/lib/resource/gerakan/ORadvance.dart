@@ -117,7 +117,7 @@ final lowerberat = [
       instruksi: " 3 sets - 10 repetisi",
       detail:
           "mulai dengan duduk di bangku. lalu gerakkan pinggang menjauh dari bangku dengan tangan memegang pinggiran kursi. perlahan gerakkan tubuh ke atas dan ke bawah dengan menggunakan tangan terutama otot triceps",
-      url: "",
+      url: "https://youtu.be/YD5OhmTxGAw",
     ),
     Upperbody(
       index: 5,
