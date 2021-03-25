@@ -304,8 +304,6 @@ class _MemberState extends State<Member> {
                     height: MediaQuery.of(context).size.height * 0.3,
                     child: LayoutBuilder(
                       builder: (context, constraints) {
-                        double innerHeight = constraints.maxHeight;
-                        double innerWidth = constraints.maxWidth;
                         return Stack(
                           children: [
                             Positioned(
