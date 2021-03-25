@@ -409,7 +409,8 @@ class _MemberState extends State<Member> {
                                                       ),
                                                     ),
                                                     Text(
-                                                      '${snapshot.data[0]['bmi'].toStringAsFixed(1)}',
+                                                      snapshot.data[0]['bmi'] == null ?
+                                                      '${snapshot.data[0]['bmi']}' : '${snapshot.data[0]['bmi'].toStringAsFixed(1)}',
                                                       style: TextStyle(
                                                         color: Color.fromRGBO(39, 105, 171, 1),
                                                         fontSize: 21,

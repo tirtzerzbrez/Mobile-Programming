@@ -163,8 +163,7 @@ class _SingupState extends State<Singup> {
                                                       new FlatButton(
                                                         child: Text("OK"),
                                                         onPressed: () {
-                                                          Navigator.pop(
-                                                              context);
+                                                          Navigator.pop(context);
                                                         },
                                                       )
                                                     ],
