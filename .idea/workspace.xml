@@ -12,11 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b1ba9ef4-fd26-4ef8-808f-39811cb4ac06" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/frontpage.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/frontpage.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/workout/berat.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/workout/berat.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/workout/punggung.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/workout/punggung.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/workout/ringan.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/workout/ringan.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitapps/lib/resource/gerakan/Lower.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/resource/gerakan/Lower.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/memberonly.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitapps/lib/pages/singup.dart" beforeDir="false" afterPath="$PROJECT_DIR$/fitapps/lib/pages/singup.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,12 +37,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/fitapps" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../P@kedex" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/fitapps" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -98,31 +96,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1128" y="298" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1615903203210" />
-    <state x="163" y="196" width="1200" height="842" key="AVDManager" timestamp="1616600304650">
+    <state x="163" y="196" width="1200" height="842" key="AVDManager" timestamp="1616673949235">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="163" y="196" width="1200" height="842" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1616600304650" />
-    <state x="658" y="196" key="FileChooserDialogImpl" timestamp="1616221734579">
+    <state x="163" y="196" width="1200" height="842" key="AVDManager/0.0.1920.1040@0.0.1920.1040" timestamp="1616673949235" />
+    <state x="658" y="196" key="FileChooserDialogImpl" timestamp="1616673945576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="468" y="145" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1615869440703" />
-    <state x="658" y="196" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616221734579" />
-    <state width="1407" height="234" key="GridCell.Tab.0.bottom" timestamp="1616568711069">
+    <state x="658" y="196" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1616673945576" />
+    <state width="1407" height="234" key="GridCell.Tab.0.bottom" timestamp="1616673931626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616568711069" />
-    <state width="1407" height="234" key="GridCell.Tab.0.center" timestamp="1616568711069">
+    <state width="1407" height="234" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1616673931626" />
+    <state width="1407" height="234" key="GridCell.Tab.0.center" timestamp="1616673931626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616568711069" />
-    <state width="1407" height="234" key="GridCell.Tab.0.left" timestamp="1616568711069">
+    <state width="1407" height="234" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1616673931626" />
+    <state width="1407" height="234" key="GridCell.Tab.0.left" timestamp="1616673931626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616568711069" />
-    <state width="1407" height="234" key="GridCell.Tab.0.right" timestamp="1616568711069">
+    <state width="1407" height="234" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1616673931626" />
+    <state width="1407" height="234" key="GridCell.Tab.0.right" timestamp="1616673931626">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1407" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616568711069" />
+    <state width="1407" height="234" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1616673931626" />
     <state x="266" y="47" key="SettingsEditor" timestamp="1615871427324">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
