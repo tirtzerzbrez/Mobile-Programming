@@ -29,7 +29,7 @@ class _beritaState extends State<berita> {
           Stack(
             children: <Widget>[
               Container(
-                height: 221,
+                height: MediaQuery.of(context).size.width/1.5,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(13.0),
                   boxShadow: [

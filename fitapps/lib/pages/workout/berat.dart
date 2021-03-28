@@ -14,7 +14,7 @@ class _BeratState extends State<Berat> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.red,
+          backgroundColor: Color.fromRGBO(128, 0, 0, 1),
           title: Text(
             "FitApp",
             style: TextStyle(color: Colors.white, fontSize: 20),

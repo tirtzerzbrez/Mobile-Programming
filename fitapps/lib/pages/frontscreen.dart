@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'workout/atas.dart';
 import 'workout/bawah.dart';
 import 'workout/punggung.dart';
+import 'package:fitapps/pages/Dev.dart';
 
 // ignore: camel_case_types
 class frontscreen extends StatefulWidget {
@@ -66,7 +67,7 @@ class _frontscreenState extends State<frontscreen> {
             title: Text('Tentang Developer'),
             leading: Icon(Icons.info_outline),
             onTap: () {
-              Navigator.pop(context);
+              Navigator.push(context,MaterialPageRoute(builder: (context) => tentangdev()),);
             },
           ),
         ],
