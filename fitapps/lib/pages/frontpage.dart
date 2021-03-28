@@ -1,14 +1,11 @@
 import 'package:fitapps/pages/CovidNews.dart';
-import 'package:fitapps/pages/Food/makansiang.dart';
 import 'package:fitapps/pages/Food/psm.dart';
 import 'package:fitapps/pages/covid19.dart';
-import 'package:fitapps/pages/singin.dart';
 import 'package:fitapps/pages/workout/berat.dart';
 import 'package:fitapps/pages/workout/ringan.dart';
 import 'package:fitapps/pages/workout/sedang.dart';
 import 'package:flutter/material.dart';
-import 'workout/atas.dart';
-import 'workout/bawah.dart';
+import 'Dev.dart';
 
 // ignore: camel_case_types
 class frontpage extends StatefulWidget {
@@ -72,7 +69,7 @@ class _frontpageState extends State<frontpage> {
                 title: Text('Tentang Developer'),
                 leading: Icon(Icons.info_outline),
                 onTap: () {
-                  Navigator.pop(context);
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => tentangdev()),);
                 },
               ),
             ],
